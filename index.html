@@ -4,31 +4,7 @@
 		<title>Digital Rift</title>
 		<meta charset="utf-8">
 		
-		<style>
-			@keyframes rotate {
-				from {
-					transform: rotate(0);
-					transform-origin: center center;
-				}
-
-				to {
-					transform: rotate(360deg);
-					transform-origin: center center;
-				}
-			}
-
-			@keyframes inv-rotate {
-				from {
-					transform: rotate(0);
-					transform-origin: center center;
-				}
-
-				to {
-					transform: rotate(-360deg);
-					transform-origin: center center;
-				}
-			}
-
+		<!-- <style>
 			#logo-circle-3 {
 				animation: rotate 3s linear infinite;
 			}
@@ -40,82 +16,159 @@
 			#logo-circle-1 {
 				animation: rotate 15s linear infinite;
 			}
-		</style>
+		</style> -->
 
-		<!-- <link rel="stylesheet" href="assets/styles/css/app.css"> -->
+		<link rel="stylesheet" href="assets/styles/css/app.css">
 	</head>
 	<body>
-		<svg id="svg4487" width="500" height="500" viewBox="0 0 500 500">
-		  <defs id="defs4491">
-		    <linearGradient inkscape:collect="always" id="linearGradient5751">
-		      <stop style="stop-color:#f9c347;stop-opacity:1" offset="0" id="stop5747" />
-		      <stop style="stop-color:#f29e58;stop-opacity:1" offset="1" id="stop5749" />
-		    </linearGradient>
-		    <linearGradient
-		       	inkscape:collect="always"
-		       	xlink:href="#linearGradient5751"
-		       	id="linearGradient5767"
-		       	gradientUnits="userSpaceOnUse"
-		       	x1="172588.84"
-		       	y1="-245.28255"
-		       	x2="172987.12"
-		       	y2="-245.28255"
-		       	gradientTransform="matrix(1.2336854,0,0,1.2336854,-212916.01,552.6014)" />
-		    <linearGradient
-		       	inkscape:collect="always"
-		       	xlink:href="#linearGradient5751"
-		       	id="linearGradient5769"
-		       	gradientUnits="userSpaceOnUse"
-		       	x1="172588.84"
-		       	y1="-245.28255"
-		       	x2="172987.12"
-		       	y2="-245.28255"
-		       	gradientTransform="matrix(1.2976185,0,0,1.2976187,-223962.89,568.28311)" />
-		    <linearGradient
-		       	inkscape:collect="always"
-		       	xlink:href="#linearGradient5751"
-		       	id="linearGradient5771"
-		       	gradientUnits="userSpaceOnUse"
-		       	x1="172588.84"
-		       	y1="-245.28255"
-		       	x2="172987.12"
-		       	y2="-245.28255"
-		       	gradientTransform="matrix(1.4157714,0,0,1.4157718,-244378.3,597.26401)" />
-		    <linearGradient
-		       	inkscape:collect="always"
-		       	xlink:href="#linearGradient5751"
-		       	id="linearGradient5771-3"
-		       	gradientUnits="userSpaceOnUse"
-		       	x1="172588.84"
-		       	y1="-245.28255"
-		       	x2="172987.12"
-		       	y2="-245.28255"
-		       	gradientTransform="matrix(0.29508683,0,0,0.29508687,-50737.474,322.37965)" />
-		  </defs>
-		  <circle
-		    	cy="250"
-		     	cx="250"
-		     	id="logo-circle-1"
-		     	style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient5767);stroke-width:24.67370796;stroke-linejoin:round;stroke-miterlimit:7;stroke-dasharray:230, 130;stroke-dashoffset:246.73707581;stroke-opacity:1"
-		     	r="237.66315" />
-		  <circle
-		    	cy="250"
-		     	cx="250"
-		     	id="logo-circle-2"
-		     	style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient5769);stroke-width:24.67399979;stroke-linejoin:round;stroke-miterlimit:7;stroke-dasharray:270, 80;stroke-dashoffset:93.76119995;stroke-opacity:1"
-		     	r="163.07846" />
-		  <circle
-		     	cy="250"
-		     	cx="250"
-		     	id="logo-circle-3"
-		     	style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient5771);stroke-width:24.67399979;stroke-linejoin:round;stroke-miterlimit:7;stroke-dasharray:210, 50;stroke-dashoffset:108.56559753;stroke-opacity:1"
-		     	r="81.798546" />
-		  <circle
-		     	cy="250"
-		     	cx="250"
-		     	id="logo-circle-4"
-		     	style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient5771-3);stroke-width:20;stroke-linejoin:round;stroke-miterlimit:7;stroke-dasharray:none;stroke-dashoffset:200;stroke-opacity:1"
-		     	r="17.049131" />
-		</svg>
+		<!-- Вертикальные полоски -->
+		<div class="back-layout"></div>
+
+		<!-- Главный экран -->
+		<section class="main section">
+			<div class="container">
+				<!-- Хедер -->
+				<header class="header">
+					<div class="row align-items-center">
+						<a class="header__brand col-3"><img class="header__brand-img" src="assets/img/logo.svg" alt="Логотип компании Digital Rift"> digital rift</a>
+						<nav class="header__nav col-6">
+							<ul class="header__nav_list">
+								<li class="header__nav_list-item"><a class="header__nav_list-link header__nav_list-link--disabled" href="/projects">Проекты</a></li>
+								<li class="header__nav_list-item"><a class="header__nav_list-link" href="/services">Услуги</a></li>
+								<li class="header__nav_list-item"><a class="header__nav_list-link header__nav_list-link--disabled" href="/recalls">Отзывы</a></li>
+								<li class="header__nav_list-item"><a class="header__nav_list-link" href="/contacts">Контакты</a></li>
+							</ul>
+						</nav>
+						<div class="header__contacts col-3">
+							<div class="header__contacts-phone">+7 (920) 820-91-41</div>
+							<a class="header__contacts-feedback" href="#">Обратный звонок</a>
+						</div>
+					</div>
+				</header>
+				<div class="row align-items-center">
+					<div class="main__left col-7">
+						<div class="section__title main__title">
+							<div class="section__title-head main__title-head">Новый взгляд</div>
+							<div class="section__title-subhead main__title-subhead">На бизнес в сети</div>
+						</div>
+						<p class="main__text">Правильно преподнесенная идея – залог успеха. Обратим внимание клиентов на ваш бизнес и сэкономим ваши деньги. Индивидуальные решения и поэтапная оплата услуг – лучшие условия для старта.</p>
+						<button class="btn">Заказать сайт в рассрочку!</button>
+					</div>
+					<div class="main__right col-5">
+						<img class="main__img-phone" src="assets/img/main-display-phone.png" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="advantages section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="section__title advantages__title">
+							<div class="section__title-number">3</div>
+							<div class="section__title-head-wrap">
+								<span class="section__title-head">Причины</span>
+								<span class="section__title-subhead">Почему стоит обратиться к нам</span>
+							</div>
+							<div class="section__title-line"></div>
+							<div class="section__title-caption">наши ориентиры</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-1">1</div>
+				<div class="col-1">2</div>
+				<div class="col-1">3</div>
+				<div class="col-1">4</div>
+				<div class="col-1">5</div>
+				<div class="col-1">6</div>
+				<div class="col-1">7</div>
+				<div class="col-1">8</div>
+				<div class="col-1">9</div>
+				<div class="col-1">10</div>
+				<div class="col-1">11</div>
+				<div class="col-1">12</div>
+			</div>
+		</div>
+
+		<div class="preloader" style="display: none;">
+			<svg class="preloader__logo" id="svg" width="500" height="500" viewBox="0 0 500 500">
+			  <defs id="defs4491">
+			    <linearGradient inkscape:collect="always" id="linearGradient5751">
+			      <stop style="stop-color:#f9c347;stop-opacity:1" offset="0" id="stop5747" />
+			      <stop style="stop-color:#f29e58;stop-opacity:1" offset="1" id="stop5749" />
+			    </linearGradient>
+			    <linearGradient
+			       	inkscape:collect="always"
+			       	xlink:href="#linearGradient5751"
+			       	id="linearGradient5767"
+			       	gradientUnits="userSpaceOnUse"
+			       	x1="172588.84"
+			       	y1="-245.28255"
+			       	x2="172987.12"
+			       	y2="-245.28255"
+			       	gradientTransform="matrix(1.2336854,0,0,1.2336854,-212916.01,552.6014)" />
+			    <linearGradient
+			       	inkscape:collect="always"
+			       	xlink:href="#linearGradient5751"
+			       	id="linearGradient5769"
+			       	gradientUnits="userSpaceOnUse"
+			       	x1="172588.84"
+			       	y1="-245.28255"
+			       	x2="172987.12"
+			       	y2="-245.28255"
+			       	gradientTransform="matrix(1.2976185,0,0,1.2976187,-223962.89,568.28311)" />
+			    <linearGradient
+			       	inkscape:collect="always"
+			       	xlink:href="#linearGradient5751"
+			       	id="linearGradient5771"
+			       	gradientUnits="userSpaceOnUse"
+			       	x1="172588.84"
+			       	y1="-245.28255"
+			       	x2="172987.12"
+			       	y2="-245.28255"
+			       	gradientTransform="matrix(1.4157714,0,0,1.4157718,-244378.3,597.26401)" />
+			    <linearGradient
+			       	inkscape:collect="always"
+			       	xlink:href="#linearGradient5751"
+			       	id="linearGradient5771-3"
+			       	gradientUnits="userSpaceOnUse"
+			       	x1="172588.84"
+			       	y1="-245.28255"
+			       	x2="172987.12"
+			       	y2="-245.28255"
+			       	gradientTransform="matrix(0.29508683,0,0,0.29508687,-50737.474,322.37965)" />
+			  </defs>
+			  <circle
+			    	cy="250"
+			     	cx="250"
+			     	id="logo-circle-1"
+			     	style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient5767);stroke-width:24.67370796;stroke-linejoin:round;stroke-miterlimit:7;stroke-dasharray:230, 130;stroke-dashoffset:246.73707581;stroke-opacity:1"
+			     	r="237.66315" />
+			  <circle
+			    	cy="250"
+			     	cx="250"
+			     	id="logo-circle-2"
+			     	style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient5769);stroke-width:24.67399979;stroke-linejoin:round;stroke-miterlimit:7;stroke-dasharray:270, 80;stroke-dashoffset:93.76119995;stroke-opacity:1"
+			     	r="163.07846" />
+			  <circle
+			     	cy="250"
+			     	cx="250"
+			     	id="logo-circle-3"
+			     	style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient5771);stroke-width:24.67399979;stroke-linejoin:round;stroke-miterlimit:7;stroke-dasharray:210, 50;stroke-dashoffset:108.56559753;stroke-opacity:1"
+			     	r="81.798546" />
+			  <circle
+			     	cy="250"
+			     	cx="250"
+			     	id="logo-circle-4"
+			     	style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient5771-3);stroke-width:20;stroke-linejoin:round;stroke-miterlimit:7;stroke-dasharray:none;stroke-dashoffset:200;stroke-opacity:1"
+			     	r="17.049131" />
+			</svg>
+		</div>
 	</body>
 </html>

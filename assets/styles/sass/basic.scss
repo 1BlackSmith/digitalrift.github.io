@@ -1,0 +1,121 @@
+/* Вертикальные полоски */
+.back-layout {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	background: repeating-linear-gradient(90deg, rgba(0,0,0,.1), rgba(0,0,0,.1) 1px, transparent 1px, transparent 14.2857%);
+}
+
+// Перемещение элементов разделов на передний план
+*:not(.section) {
+	z-index: 2;
+}
+
+
+/* Разделы */
+.section {
+	
+	&__title {
+		margin-bottom: 50px;
+
+		&-head,
+		&-subhead {
+			font-size: 2rem;
+			line-height: 1.3em;
+			text-transform: uppercase;
+		}
+
+		&-head {
+			font-family: 'Gotham Pro Bold';
+		}
+
+		&-number {
+			margin-right: 10px;
+
+			// Градиетная заливка для текста
+			background: linear-gradient(to right, $yellow, $orange);
+	    -webkit-background-clip: text;
+	    -o-background-clip: text;
+	    -moz-background-clip: text;
+	    -ms-background-clip: text;
+	    color: transparent;
+
+			font-family: 'Gotham Pro Bold';
+			font-size: 11.625rem;
+			line-height: 9.625rem;
+		}
+
+		&-head-wrap {
+			margin-right: 10px;
+			width: 39%;
+		}
+
+		&-line {
+			margin-right: 15px;
+			margin-bottom: 2rem;
+			width: 30%;
+			height: 1px;
+			background-color: rgba(0,0,0,.1);
+		}
+
+		&-caption {
+			margin-bottom: 1.5rem;
+			width: 18%;
+			font-family: 'Gotham Pro Medium';
+			line-height: 1.3125em;
+			letter-spacing: .3em;
+			text-align: right;
+		}
+	}
+}
+
+
+
+/* Кнопки */
+.btn {
+	position: relative;
+	top: 0;
+	border-radius: 10px;
+	padding: 26px 42px;
+	background: linear-gradient(to bottom, $yellow, $orange);
+	color: $white;
+	font-family: 'Gotham Pro Medium';
+	font-size: 1rem;
+	line-height: 1em;
+	box-shadow: 0 5px 0 0 $darkOrange;
+	transition: all .3s ease;
+
+	&:hover {
+		top: 5px;
+		box-shadow: none;
+	}
+}
+
+
+/* Анимация */
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+		transform-origin: center center;
+	}
+
+	to {
+		transform: rotate(360deg);
+		transform-origin: center center;
+	}
+}
+
+@keyframes inv-rotate {
+	from {
+		transform: rotate(0);
+		transform-origin: center center;
+	}
+
+	to {
+		transform: rotate(-360deg);
+		transform-origin: center center;
+	}
+}

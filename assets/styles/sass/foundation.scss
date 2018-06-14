@@ -1,0 +1,163 @@
+
+/* =========================================================== 
+ * Шрифты
+ * ===========================================================
+ */
+@font-face {
+	font-family: 'Gotham Pro Light';
+	src: url('../../fonts/GothamPro-Light.ttf'); 
+}
+
+@font-face {
+	font-family: 'Gotham Pro Regular';
+	src: url('../../fonts/GothamPro.ttf'); 
+}
+
+@font-face {
+	font-family: 'Gotham Pro Medium';
+	src: url('../../fonts/GothamPro-Medium.ttf'); 
+}
+
+@font-face {
+	font-family: 'Gotham Pro Bold';
+	src: url('../../fonts/GothamPro-Bold.ttf'); 
+}
+
+@font-face {
+	font-family: 'Gotham Pro Black';
+	src: url('../../fonts/GothamPro-Black.ttf'); 
+}
+
+
+
+/* =========================================================== 
+ * Основное
+ * ===========================================================
+ */
+html {
+	font-family: 'Gotham Pro Regular';
+	font-size: 16px;
+	line-height: 26px;
+	color: $black; 
+}
+
+body {
+	position: relative;
+	margin: 0;
+	background-color: #fff; 
+}
+
+
+
+/* =========================================================== 
+ * Списки
+ * ===========================================================
+ */
+ul {
+	list-style: none;
+	font-size: 0;
+	padding: 0;
+
+	li {
+		font-size: 1rem; 
+	} 
+}
+
+
+
+/* =========================================================== 
+ * Формы
+ * ===========================================================
+ */
+form {
+	margin: 0; 
+}
+
+:focus {
+	outline: none; 
+}
+
+::placeholder {
+	color: #777;
+	opacity: .5 !important;
+	transition: opacity .3s, visibility .3s; 
+}
+
+:focus::placeholder {
+	opacity: 0 !important;
+	visibility: hidden; 
+}
+
+button {
+	display: inline-block;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+input,
+textarea {
+	border: 1px solid $black;
+	padding: 10px 15px;
+	background: transparent;
+	font-family: 'Gotham Pro Regular';
+	font-size: .875rem;
+	color: $black; 
+}
+
+
+
+/* =========================================================== 
+ * Полиграфика
+ * ===========================================================
+ */
+a {
+	color: #111;
+	text-decoration: none; 
+}
+
+h1,
+h2,
+h3,
+b {
+	font-family: 'Gotham Pro Bold'; 
+}
+
+h1, h2, h3 { 
+	letter-spacing: .05em;
+	line-height: 1em;
+	margin: 0; 
+}
+
+h1 {
+	font-size: 4rem; 
+}
+
+h2 {
+	font-size: 2.25rem; 
+}
+
+h3 {
+	font-size: 1.25rem; 
+}
+
+
+p {
+	margin: 1.5625em 0;
+	font-family: 'Gotham Pro Light'; 
+}
+
+small {
+	font-family: 'Gotham Pro Light'; 
+}
+
+
+/* =========================================================== 
+ * Кастомизация bootstrap
+ * ===========================================================
+ */
+@media (min-width: 1200px) {
+	.container {
+	    max-width: 1200px;
+	}
+}

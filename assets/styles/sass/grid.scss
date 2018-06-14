@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	padding: 0 15px;
+	width: 1200px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+
+	&.align-items {
+		&-center {
+			align-items: center;
+		}
+	}
+
+	&.justify-content {
+		&-between {
+			justify-content: space-between;
+		}
+	}
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+  	padding: 0 1.25%;
+  	width: 8.333333% * $i;
+  }
+
+  .offs-#{$i} {
+  	margin-right: 8.333333% * $i;
+  }
+}

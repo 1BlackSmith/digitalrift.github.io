@@ -1,0 +1,51 @@
+@import 'variables.scss';
+@import 'foundation.scss';
+@import 'basic.scss';
+
+@import 'grid.scss';
+
+
+@import 'blocks/header.scss';
+
+
+/* Главный экран */
+.main {
+	background-image: url(../../img/main-display-bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: $white;
+
+	&__title {
+
+		&-head,
+		&-subhead {
+			font-size: 3.75rem;
+		}
+	}
+
+	&__text {
+		margin-bottom: 60px;
+		font-size: 1.25rem;
+		line-height: 2em;
+	}
+
+
+	&__right {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+
+/* Раздел "Преимущества" */
+.advantages {
+	margin-top: 140px;
+
+	&__title {
+		display: flex;
+		align-items: flex-end;
+		//justify-content: space-between;
+		margin-bottom: 120px;
+	}
+}
