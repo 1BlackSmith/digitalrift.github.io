@@ -184,3 +184,140 @@
 		}
 	}
 }
+
+
+/* Раздел "Презентация" */
+.presentation {
+	margin-top: -150px;
+	margin-bottom: 30px;
+	padding-top: 170px;
+	padding-bottom: 320px;
+	background-image: url(../../img/presentation-bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: $white;
+
+	&__title {
+
+		&-head,
+		&-subhead {
+			font-size: 3.125rem;
+		}
+	}
+
+	&__text {
+		font-size: 1.1111rem;
+	}
+
+	&__btn {
+		margin-top: 50px;
+	}
+
+	&__manager {
+		margin-top: 80px;
+		margin-right: 50px;
+		text-align: right;
+
+		&-name {
+			margin-bottom: 10px;
+			font-family: 'Gotham Pro Medium';
+			letter-spacing: .3em;
+			text-transform: uppercase;
+		}
+
+		&-surname {
+			color: $orange;
+		}
+
+		&-desc {
+			opacity: .8;
+		}
+	}
+}
+
+
+/* Раздел "Контакты" */
+.contacts {
+
+	&__title {
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 160px;
+
+		&-number {
+			margin-right: 20px;
+			margin-left: -35px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		margin-bottom: 100px;
+		padding-left: 30px;
+
+		&:before {
+			position: absolute;
+			top: -10px;
+			left: 0;
+			width: 10px;
+			height: 80px;
+			background: linear-gradient(to right, $yellow, $orange);
+			content: "";
+		}
+
+		&--download:before {
+			top: -7px;
+			height: 100px;
+		}
+
+		&--feedback:before {
+			top: -15px;
+		}
+
+		&-head {
+			margin-bottom: 10px;
+			font-family: 'Gotham Pro Bold';
+			font-size: 1.2222rem;
+			text-transform: uppercase;
+		}
+
+		&-text,
+		&-link {
+			font-size: 1.111rem;
+		}
+
+		&-link {
+			display: block;
+			text-decoration: underline;
+		}
+	}	
+
+	&__feedback {
+		margin-top: 40px;
+
+		&-input {
+			margin-bottom: 35px;
+		}
+
+		&-btn {
+			margin-bottom: 30px;
+			width: 290px; 
+		}
+
+		&-agreement {
+			display: flex;
+			align-items: flex-start;
+			font-size: .7777rem;
+			line-height: 1.5em;
+
+			img {
+				display: inline-block;
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+
+@import 'blocks/footer.scss';

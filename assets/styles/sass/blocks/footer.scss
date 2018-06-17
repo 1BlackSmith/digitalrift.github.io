@@ -1,0 +1,28 @@
+.footer {
+	padding: 70px 0;
+
+	&__inner {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__copyright {
+		opacity: .5;
+	}
+
+	&__text {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $blue;
+	}
+
+	&__social {
+
+		&-link {
+			padding: 0 40px;
+			text-decoration: underline;
+		}
+	}
+}

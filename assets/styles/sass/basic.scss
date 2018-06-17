@@ -10,13 +10,15 @@
 }
 
 // Перемещение элементов разделов на передний план
-.section > * {
+.section > *,
+.footer > * {
 	z-index: 2;
 }
 
 
 /* Разделы */
 .section {
+	position: relative;
 	
 	&__title {
 		margin-bottom: 30px;
@@ -34,6 +36,7 @@
 
 		&-number {
 			margin-bottom: -35px;
+			margin-left: -20px;
 		}
 
 		&-head-wrap {
@@ -66,11 +69,13 @@
 .btn {
 	position: relative;
 	top: 0;
-	padding: 26px 42px;
+	display: inline-block;
+	padding: 24px 42px;
 	color: $white;
 	font-family: 'Gotham Pro Medium';
 	font-size: 1rem;
 	line-height: 1em;
+	text-align: center;
 
 	&:before {
 		position: absolute;
