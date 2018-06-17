@@ -95,14 +95,19 @@ button {
 	cursor: pointer;
 }
 
-input,
-textarea {
-	border: 1px solid $black;
-	padding: 10px 15px;
-	background: transparent;
+input {
+	border: 2px solid rgba(0,0,0,.2);
+	border-radius: 10px;
+	padding: 24px;
+	width: 290px;
+	background: $white;
 	font-family: 'Gotham Pro Regular';
-	font-size: .875rem;
-	color: $black; 
+	font-size: 1rem;
+	color: $orange;
+
+	&:focus {
+		border-color: rgba(0,0,0,.6);
+	} 
 }
 
 

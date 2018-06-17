@@ -38,7 +38,11 @@
   	width: 8.333333% * $i;
   }
 
-  .offs-#{$i} {
+  .offset-right-#{$i} {
   	margin-right: 8.333333% * $i;
+  }
+
+  .offset-left-#{$i} {
+  	margin-left: 8.333333% * $i;
   }
 }
