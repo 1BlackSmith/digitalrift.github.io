@@ -255,6 +255,7 @@
 		}
 
 		&-surname {
+			margin-right: -0.3rem; // NOTE: по просьбе дизайнера, чтобы текст вровень был
 			color: $orange;
 		}
 
@@ -339,8 +340,7 @@
 			font-size: .7777rem;
 			line-height: 1.5em;
 
-			img {
-				display: inline-block;
+			.checkbox {
 				margin-right: 15px;
 			}
 		}
@@ -504,3 +504,31 @@
 	}
 }
 
+
+.checkbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 16px;
+	height: 16px;
+	border: 2px solid #ccc;
+	border-radius: 100%;
+	cursor: pointer;
+
+	&_active &__point {
+		visibility: visible;
+	}
+
+	&:active {
+		border-color: #777;
+	}
+
+	&__point {
+		width: 50%;
+		height: 50%;
+		border-radius: 100%;
+		border: 1px solid $orange;
+		background-color: $orange;
+		visibility: hidden;
+	}
+}
