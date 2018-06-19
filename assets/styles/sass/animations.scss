@@ -1,0 +1,44 @@
+/* Анимация пузырьков */
+
+@keyframes move-bubble-1 {
+    0% {
+        top: -40px;
+        right: -40px;
+    }
+    50% {
+        top: -30px;
+        right: -30px;
+    }
+    100% {
+        top: -20px;
+        right: -40px;
+    }
+}
+
+
+@keyframes move-bubble-2 {
+    0% {
+        top: 40px;
+        left: 40px;
+    }
+    50% {
+        top: 50px;
+        left: 80px;
+    }
+    100% {
+        top: 110px;
+        left: 40px;
+    }
+}
+
+
+@keyframes move-bubble-3 {
+    0% {
+        left: 80px;
+		bottom: 40px;
+    }
+    100% {
+        left: 0px;
+		bottom: 80px;
+    }
+}
