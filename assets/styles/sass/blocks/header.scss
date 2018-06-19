@@ -28,7 +28,18 @@
 			&-link {
 				margin: 0 25px;
 				color: $white;
-				font-size: 1.1111rem; 
+				font-size: 1.1111rem;
+
+				&--disabled {
+					position: relative;
+
+					&:hover .tooltip {
+						animation-timing-function: ease-in;
+						animation-fill-mode: forwards;
+						animation-duration: 0.3s;
+						animation-name: show;
+					}
+				}
 			}
 		}
 	}

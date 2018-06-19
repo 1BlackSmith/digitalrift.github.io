@@ -133,13 +133,25 @@
 // }
 
 
-// /* Скрытие элемета */
+/* Скрытие элемета */
 
-// @keyframes hide {
-//     from {
-//         opacity: 1;
-//     }
-//     to {
-//         opacity: 0;
-//     }
-// }
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* Показ элемета */
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

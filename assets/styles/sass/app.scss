@@ -532,3 +532,32 @@
 		visibility: hidden;
 	}
 }
+
+
+/* Всплывающая подсказка */
+.tooltip {
+	position: absolute;
+	top: -50px;
+	left: 20px;
+	opacity: 0;
+
+	.tooltip__container {
+		padding: 5px 20px;
+		width: 150px;
+		border-radius: 6px;
+		background: $orange linear-gradient(to bottom, $orange, $yellow);
+	}
+
+	.tooltip__text {
+		font-size: 0.9rem;
+		color: #fff;
+	}
+
+	.tooltip__triangle {
+		position: relative;
+		left: 15px;
+		width: 10px;
+		border: 5px solid transparent;
+		border-top: 8px solid $yellow;
+	}
+}
