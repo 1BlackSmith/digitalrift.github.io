@@ -4,8 +4,12 @@
 
 @import 'grid.scss';
 
-
 @import 'blocks/header.scss';
+@import 'blocks/footer.scss';
+
+
+// TODO: подумать что делать с планетами
+.planets { display: none; }
 
 
 /* Главный экран */
@@ -27,7 +31,7 @@
 
 	&__text {
 		margin-bottom: 40px;
-		font-family: 'Gotham Pro Light'; 
+		font-family: 'Gotham Pro Light';
 		font-size: 1.25rem;
 		line-height: 2em;
 	}
@@ -291,7 +295,7 @@
 			display: block;
 			text-decoration: underline;
 		}
-	}	
+	}
 
 	&__feedback {
 		margin-top: 40px;
@@ -302,7 +306,7 @@
 
 		&-btn {
 			margin-bottom: 30px;
-			width: 290px; 
+			width: 290px;
 		}
 
 		&-agreement {
@@ -318,6 +322,3 @@
 		}
 	}
 }
-
-
-@import 'blocks/footer.scss';
