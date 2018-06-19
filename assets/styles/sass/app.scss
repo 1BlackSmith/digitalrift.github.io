@@ -201,6 +201,7 @@
 
 /* Раздел "Презентация" */
 .presentation {
+	position: relative;
 	margin-top: -150px;
 	margin-bottom: 30px;
 	padding-top: 170px;
@@ -338,8 +339,9 @@
 	position: absolute;
 	border-radius: 100%;
 	animation-direction: alternate;
-	animation-timing-function: ease-in;
+	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
+	animation-duration: 2s;
 
 	&_1 {
 		z-index: 100;
@@ -348,7 +350,6 @@
 		@include bubble-gradient(to right);
 		box-shadow: 0 15px 30px 0 rgba(0,0,0, 0.2);
 		animation-name: move-bubble-1;
-		animation-duration: 2s;
 	}
 
 	&_2 {
@@ -357,7 +358,6 @@
 		@include bubble-gradient(to bottom);
 		box-shadow: 0 0 20px 0 rgba(0,0,0, 0.1);
 		animation-name: move-bubble-2;
-		animation-duration: 5s;
 	}
 
 	&_3 {
@@ -365,11 +365,85 @@
 		height: 160px;
 		width: 160px;
 		@include bubble-gradient(to left);
-		box-shadow: 10px 0 20px 0 $bubble-color-start,
-					-10px 0 20px 0 $bubble-color-end;
+		box-shadow: 3px 0 10px 0 $bubble-color-start,
+					-3px 0 10px 0 $bubble-color-end;
 		animation-name: move-bubble-3;
-		animation-duration: 3s;
 	}
 
+	&_4 {
+		height: 15px;
+		width: 15px;
+		@include bubble-gradient(to right);
+		box-shadow: 0 0 10px 0 rgba(0,0,0, 0.2);
+		animation-name: move-bubble-4;
+	}
+
+	&_5 {
+		height: 20px;
+		width: 20px;
+		@include bubble-gradient(to right);
+		box-shadow: 0 0 10px 0 rgba(0,0,0, 0.2);
+		animation-name: move-bubble-5;
+	}
+
+	&_6 {
+		height: 120px;
+		width: 120px;
+		@include bubble-gradient(to right);
+		box-shadow: 0 0 30px 0 rgba(0,0,0, 0.3);
+		animation-name: move-bubble-6;
+	}
+
+	&_7 {
+		height: 30px;
+		width: 30px;
+		@include bubble-gradient(to left);
+		box-shadow: 0 0 10px 0 rgba(0,0,0, 0.2);
+		animation-name: move-bubble-7;
+		animation-duration: 1s;
+	}
+
+	&_8 {
+		height: 40px;
+		width: 40px;
+		@include bubble-gradient(to right);
+		box-shadow: 0 0 10px 0 rgba(0,0,0, 0.2);
+		animation-name: move-bubble-8;
+		animation-duration: 1s;
+	}
+
+	&_9 {
+		height: 250px;
+		width: 250px;
+		@include bubble-gradient(to bottom);
+		box-shadow: 0 -10px 10px 0 $bubble-color-start,
+					0 5px 10px 0 $bubble-color-end;
+		animation-name: move-bubble-9;
+	}
+
+	&_10 {
+		height: 20px;
+		width: 20px;
+		@include bubble-gradient(to left);
+		box-shadow: 0 0 10px 0 rgba(0,0,0, 0.2);
+		animation-name: move-bubble-10;
+	}
+
+	&_11 {
+		height: 90px;
+		width: 90px;
+		@include bubble-gradient(to right);
+		box-shadow: 0 0 30px 0 rgba(0,0,0, 0.2);
+		animation-name: move-bubble-11;
+	}
+
+	&_12 {
+		height: 200px;
+		width: 200px;
+		@include bubble-gradient(to bottom);
+		box-shadow: 0 -10px 10px 0 $bubble-color-start,
+					0 5px 10px 0 $bubble-color-end;
+		animation-name: move-bubble-12;
+	}
 
 }
