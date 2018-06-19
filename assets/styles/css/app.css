@@ -96,6 +96,15 @@
     bottom: -310px;
     right: -10px; } }
 
+/* Скрытие элемета */
+@keyframes hide {
+  from {
+    display: block;
+    opacity: 1; }
+  to {
+    opacity: 0;
+    display: none; } }
+
 /* =========================================================== 
  * Шрифты
  * ===========================================================
@@ -841,6 +850,7 @@ small {
     box-shadow: 0 -10px 10px 0 #57c4e1, 0 5px 10px 0 #2780ee;
     animation-name: move-bubble-12; }
 
+/* Секции страницы */
 .section .section__title-number img {
   transition-duration: 1s;
   transition-timing-function: ease;
@@ -848,3 +858,26 @@ small {
 
 .section:hover .section__title-number img {
   transform: rotateY(360deg); }
+
+/* Блок с загрузочным изображением */
+.block-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 102;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: white; }
+  .block-loading_hide {
+    animation-name: hide;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; }
+  .block-loading__picture {
+    width: 150px;
+    height: 150px;
+    background-image: url("../../img/logo.svg");
+    background-size: cover; }

@@ -462,6 +462,7 @@
 }
 
 
+/* Секции страницы */
 .section {
 	.section__title-number img {
 		transition-duration: 1s;
@@ -473,3 +474,33 @@
 		transform: rotateY(360deg);
 	}
 }
+
+
+/* Блок с загрузочным изображением */
+.block-loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 102;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+
+	&_hide {
+		animation-name: hide;
+		animation-duration: 0.5s;
+		animation-timing-function: linear;
+		animation-fill-mode: forwards;
+	}
+
+	&__picture {
+		width: 150px;
+		height: 150px;
+		background-image: url("../../img/logo.svg");
+		background-size: cover;
+	}
+}
+
