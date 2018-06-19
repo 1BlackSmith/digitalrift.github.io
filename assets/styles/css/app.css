@@ -430,7 +430,8 @@ small {
           animation-timing-function: ease-in;
           animation-fill-mode: forwards;
           animation-duration: 0.3s;
-          animation-name: show; }
+          animation-name: show;
+          visibility: visible; }
   .header__contacts {
     text-align: right; }
     .header__contacts-phone {
@@ -824,7 +825,8 @@ small {
   position: absolute;
   top: -50px;
   left: 20px;
-  opacity: 0; }
+  opacity: 0;
+  visibility: hidden; }
   .tooltip .tooltip__container {
     padding: 5px 20px;
     width: 150px;
