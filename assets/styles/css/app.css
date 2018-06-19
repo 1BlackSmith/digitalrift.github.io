@@ -576,6 +576,8 @@ small {
     padding: 25px;
     background-color: #fff;
     box-shadow: -5px 20px 40px rgba(0, 0, 0, 0.15); }
+    .advantages__item:hover .advantages__item-number {
+      padding-bottom: 10px; }
     .advantages__item-wrap {
       display: flex;
       align-items: stretch; }
@@ -584,7 +586,10 @@ small {
       z-index: -1;
       right: -18px;
       display: block;
-      bottom: calc(100% - 50px); }
+      bottom: calc(100% - 50px);
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in;
+      transition-property: padding-bottom; }
     .advantages__item-head {
       font-family: 'Gotham Pro Bold';
       font-size: 1.25rem;
@@ -645,6 +650,8 @@ small {
     background: linear-gradient(to bottom, #f1995d, #f9ca46);
     color: #fff;
     box-shadow: -5px 20px 40px rgba(0, 0, 0, 0.15); }
+    .steps__item:hover .steps__item-number {
+      padding-bottom: 10px; }
     .steps__item-wrap {
       display: flex;
       align-items: stretch; }
@@ -653,7 +660,10 @@ small {
       z-index: -1;
       right: -18px;
       display: block;
-      bottom: calc(100% - 50px); }
+      bottom: calc(100% - 50px);
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in;
+      transition-property: padding-bottom; }
     .steps__item-head {
       font-family: 'Gotham Pro Bold';
       font-size: 1.25rem;
@@ -830,3 +840,11 @@ small {
     background: #57c4e1 linear-gradient(to bottom, #57c4e1 0%, #4cabeb 50%, #2780ee 100%);
     box-shadow: 0 -10px 10px 0 #57c4e1, 0 5px 10px 0 #2780ee;
     animation-name: move-bubble-12; }
+
+.section .section__title-number img {
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  transition-property: transform; }
+
+.section:hover .section__title-number img {
+  transform: rotateY(360deg); }
