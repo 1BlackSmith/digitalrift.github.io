@@ -4,11 +4,49 @@
 		<title>Digital Rift</title>
 		<meta charset="utf-8">
 
-		<script src="assets/js/logo.js"></script>
-		<script src="assets/js/checkbox.js"></script>
+		<script src="assets/js/main.js"></script>
 		<link rel="stylesheet" href="assets/styles/css/app.css">
 	</head>
 	<body>
+
+		<!-- Блок обратного звонка -->
+		<div class="block-feedback" id="blockFeedback">
+			<div class="block-feedback__shadow"></div>
+			<div class="block-feedback__container">
+				<div class="block-feedback__bg"></div>
+				<div class="block-feedback__content-container">
+					<div class="block-feedback__content">
+						<div class="block-feedback__blue-block"></div>
+						<div class="block-feedback__row">
+							<div class="block-feedback__column block-feedback__column_left">
+								<div class="block-feedback__text-block">
+									<div class="block-feedback__text-line">Получите сайт</div>
+									<div class="block-feedback__text-line block-feedback__text-line_orange block-feedback__text-line_big">в рассрочку</div>
+									<div class="block-feedback__text-line block-feedback__text-line_small">быстро и со скидкой</div>
+									<div class="block-feedback__text-line block-feedback__text-line_extra block-feedback__text-line_orange">20%</div>
+								</div>
+							</div>
+							<div class="block-feedback__column block-feedback__column_right">
+								<div class="block-feedback__button-close" id="closeBlockFeedback">
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</div>
+								<form class="contacts__feedback" action="">
+									<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
+									<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
+									<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
+									<div class="contacts__feedback-agreement">
+										<div class="checkbox">
+											<div class="checkbox__point"></div>
+										</div>
+										<span>Нажимая кнопку "Отправить заявку",<br>я даю согласие данному сайту на <br>обработку моих персональных данных</span>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Блок, показываемый в момент загрузки страницы -->
 		<div class="block-loading" id="blockLoading">
@@ -55,7 +93,7 @@
 						</nav>
 						<div class="header__contacts col-3">
 							<div class="header__contacts-phone">+7 (920) 820-91-41</div>
-							<a class="header__contacts-feedback" href="#">Обратный звонок</a>
+							<a class="header__contacts-feedback" id="feedbackButton">Обратный звонок</a>
 						</div>
 					</div>
 				</header>
@@ -445,7 +483,7 @@
 								<input class="contacts__feedback-input" type="phone" name="phone" placeholder="Ваш телефон:">
 								<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
 								<div class="contacts__feedback-agreement">
-									<div class="checkbox" id="checkboxAgree">
+									<div class="checkbox">
 										<div class="checkbox__point"></div>
 									</div>
 									<span>Нажимая кнопку "Отправить заявку",<br>я даю согласие данному сайту на <br>обработку моих персональных данных</span>
