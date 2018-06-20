@@ -3251,21 +3251,21 @@ small {
 /* Всплывающая подсказка */
 .tooltip {
   position: absolute;
-  top: -50px;
+  top: -45px;
   left: 20px;
   opacity: 0;
   visibility: hidden; }
   .tooltip .tooltip__container {
-    padding: 5px 20px;
+    padding: 2px 10px;
     width: 150px;
     border-radius: 6px;
-    background: #f1995d linear-gradient(to bottom, #f1995d, #f9ca46); }
+    background: #f1995d linear-gradient(to left, #f1995d, #f9ca46); }
   .tooltip .tooltip__text {
     font-size: 0.9rem;
     color: #fff; }
   .tooltip .tooltip__triangle {
     position: relative;
-    left: 15px;
+    left: 10px;
     width: 10px;
     border: 5px solid transparent;
     border-top: 8px solid #f9ca46; }
@@ -3277,7 +3277,6 @@ small {
   top: 0;
   left: 0;
   display: none;
-  align-items: center;
   height: 100%;
   width: 100%;
   opacity: 0; }
@@ -3292,7 +3291,7 @@ small {
     animation-duration: 0.4s;
     animation-fill-mode: forwards; }
   .block-feedback__text-block {
-    padding-left: 150px; }
+    font-family: 'Gotham Pro Bold'; }
   .block-feedback__text-line {
     padding-top: 30px;
     color: white;
@@ -3303,10 +3302,10 @@ small {
     .block-feedback__text-line_big {
       font-size: 2.6rem; }
     .block-feedback__text-line_small {
-      font-size: 1.8rem; }
+      font-size: 1.5rem; }
     .block-feedback__text-line_extra {
-      font-size: 8rem;
-      line-height: 8rem;
+      font-size: 7rem;
+      line-height: 6rem;
       text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
   .block-feedback__shadow {
     position: absolute;
@@ -3320,35 +3319,19 @@ small {
   .block-feedback__container {
     position: relative;
     z-index: 102;
-    width: 100%; }
-  .block-feedback__bg {
-    position: absolute;
-    z-index: 101;
-    top: 0;
-    left: 0;
-    height: 1123px;
-    width: 1905px;
-    background-image: url("../../img/feedback-bg.png");
-    opacity: 0.6; }
-  .block-feedback__blue-block {
-    position: relative;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-color: #046bcc;
-    background-image: url("../../img/feedback-bg.png");
-    background-size: 1905px 1123px;
-    background-position-x: 1505px; }
-  .block-feedback__content-container {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    width: 100%;
+    height: 100%; }
   .block-feedback__content {
     position: relative;
-    z-index: 102;
     width: 1100px;
     height: 700px;
-    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.4); }
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.4);
+    background-color: #046bcc;
+    background-image: url("../../img/feedback-bg.png");
+    background-size: cover; }
   .block-feedback__button-close {
     position: absolute;
     right: 30px;
@@ -3360,6 +3343,7 @@ small {
       color: #f1995d; }
   .block-feedback__row {
     position: absolute;
+    z-index: 104;
     top: 0;
     left: 0;
     display: flex;

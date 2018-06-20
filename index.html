@@ -13,35 +13,31 @@
 		<div class="block-feedback" id="blockFeedback">
 			<div class="block-feedback__shadow"></div>
 			<div class="block-feedback__container">
-				<div class="block-feedback__bg"></div>
-				<div class="block-feedback__content-container">
-					<div class="block-feedback__content">
-						<div class="block-feedback__blue-block"></div>
-						<div class="block-feedback__row">
-							<div class="block-feedback__column block-feedback__column_left">
-								<div class="block-feedback__text-block">
-									<div class="block-feedback__text-line">Получите сайт</div>
-									<div class="block-feedback__text-line block-feedback__text-line_orange block-feedback__text-line_big">в рассрочку</div>
-									<div class="block-feedback__text-line block-feedback__text-line_small">быстро и со скидкой</div>
-									<div class="block-feedback__text-line block-feedback__text-line_extra block-feedback__text-line_orange">20%</div>
-								</div>
+				<div class="block-feedback__content">
+					<div class="block-feedback__row">
+						<div class="block-feedback__column block-feedback__column_left">
+							<div class="block-feedback__text-block">
+								<div class="block-feedback__text-line">Получите сайт</div>
+								<div class="block-feedback__text-line block-feedback__text-line_orange block-feedback__text-line_big">в рассрочку</div>
+								<div class="block-feedback__text-line block-feedback__text-line_small">быстро и со скидкой</div>
+								<div class="block-feedback__text-line block-feedback__text-line_extra block-feedback__text-line_orange">20%</div>
 							</div>
-							<div class="block-feedback__column block-feedback__column_right">
-								<div class="block-feedback__button-close" id="closeBlockFeedback">
-									<i class="fa fa-times" aria-hidden="true"></i>
-								</div>
-								<form class="contacts__feedback" action="">
-									<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
-									<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
-									<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
-									<div class="contacts__feedback-agreement">
-										<div class="checkbox">
-											<div class="checkbox__point"></div>
-										</div>
-										<span>Нажимая кнопку "Отправить заявку",<br>я даю согласие данному сайту на <br>обработку моих персональных данных</span>
+						</div>
+						<div class="block-feedback__column block-feedback__column_right">
+							<div class="block-feedback__button-close" id="closeBlockFeedback">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+							<form class="contacts__feedback" action="">
+								<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
+								<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
+								<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
+								<div class="contacts__feedback-agreement">
+									<div class="checkbox">
+										<div class="checkbox__point"></div>
 									</div>
-								</form>
-							</div>
+									<span>Нажимая кнопку "Отправить заявку",<br>я даю согласие данному сайту на <br>обработку моих персональных данных</span>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -66,22 +62,14 @@
 						<nav class="header__nav col-6">
 							<ul class="header__nav_list">
 								<li class="header__nav_list-item">
-									<a class="header__nav_list-link header__nav_list-link--disabled" href="#">
-										Проекты
-										<div class="tooltip">
-											<div class="tooltip__container">
-												<div class="tooltip__text">В Разработке</div>
-											</div>
-											<div class="tooltip__triangle"></div>
-										</div>
-									</a>
+									<a class="header__nav_list-link header__nav_list-link--disabled" href="#">Проекты</a>
 								</li>
 								<li class="header__nav_list-item"><a class="header__nav_list-link" href="/services">Услуги</a></li>
 								<li class="header__nav_list-item">
 									<a class="header__nav_list-link header__nav_list-link--disabled" href="#">
 										<div class="tooltip">
 											<div class="tooltip__container">
-												<div class="tooltip__text">В Разработке</div>
+												<div class="tooltip__text">В разработке</div>
 											</div>
 											<div class="tooltip__triangle"></div>
 										</div>
@@ -93,7 +81,7 @@
 						</nav>
 						<div class="header__contacts col-3">
 							<div class="header__contacts-phone">+7 (920) 820-91-41</div>
-							<a class="header__contacts-feedback" id="feedbackButton">Обратный звонок</a>
+							<a class="header__contacts-feedback blockFeedbackShow">Обратный звонок</a>
 						</div>
 					</div>
 				</header>
@@ -104,7 +92,7 @@
 							<div class="section__title-subhead main__title-subhead">На бизнес в сети</div>
 						</div>
 						<p class="main__text">Правильно преподнесенная идея – залог успеха. Обратим внимание клиентов на ваш бизнес и сэкономим ваши деньги. Индивидуальные решения и поэтапная оплата услуг – лучшие условия для старта.</p>
-						<button class="btn">Заказать сайт в рассрочку!</button>
+						<button class="btn blockFeedbackShow">Заказать сайт в рассрочку!</button>
 					</div>
 					<div class="main__right col-5">
 						<div class="bubble bubble_1"></div>
@@ -349,7 +337,7 @@
 						</div>
 					</div>
 					<div class="row justify-content-center">
-						<button class="btn">Получить консультанцию</button>
+						<button class="btn blockFeedbackShow">Получить консультанцию</button>
 					</div>
 				</div>
 			</div>

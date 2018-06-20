@@ -11,9 +11,10 @@ window.addEventListener('load', function(e) {
     /* Переключение флажка */
 
     var checkboxs = document.getElementsByClassName('checkbox');
-    for (var i = 0; i < checkboxs.length; i++) {
+    for (let i = 0; i < checkboxs.length; i++) {
         checkboxs[i].addEventListener('click', function(e) {
-            e.target.classList.toggle('checkbox_active');
+            console.log("+");
+            checkboxs[i].classList.toggle('checkbox_active');
         });
     }
 
@@ -26,19 +27,23 @@ window.addEventListener('load', function(e) {
         window.setTimeout(function() {
             blockFeedback.style.display = "none";
             blockFeedback.classList.remove("block-feedback_hide");
+            var checkbox = blockFeedback.getElementsByClassName("checkbox")[0];
+            checkbox.classList.remove('checkbox_active');
         }, 400);
     });
 
     /* Открытие блока отправки заявки */
 
-     var feedbackButton = document.getElementById("feedbackButton");
-     feedbackButton.addEventListener("click", function(e) {
-        blockFeedback.style.display = "flex";
-        blockFeedback.classList.add("block-feedback_show");
-        window.setTimeout(function() {
-            blockFeedback.classList.remove("block-feedback_show");
-            blockFeedback.style.opacity = 1;
-        }, 400);
-     });
+     var buttons = document.getElementsByClassName("blockFeedbackShow");
+     for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function(e) {
+            blockFeedback.style.display = "flex";
+            blockFeedback.classList.add("block-feedback_show");
+            window.setTimeout(function() {
+                blockFeedback.classList.remove("block-feedback_show");
+                blockFeedback.style.opacity = 1;
+            }, 400);
+        });
+    }
 
 });
