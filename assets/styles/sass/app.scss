@@ -583,6 +583,26 @@
 	width: 100%;
 	opacity: 0;
 
+	&_little {
+		.block-feedback__content {
+			width: 500px;
+			height: 720px;
+			background-image: url("../../img/feedback-small-bg.jpg");
+		}
+
+		.block-feedback__row {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 100px 60px;
+		}
+
+		.block-feedback__text-line:first-child {
+			padding-top: 0;
+		}
+	}
+
 	&_show {
 		animation-name: show;
 		animation-timing-function: linear;
@@ -598,8 +618,6 @@
 	}
 
 	&__text-block {
-		padding-top: 40px;
-		padding-left: 100px;
 		font-family: 'Gotham Pro Bold';
 	}
 
@@ -608,14 +626,26 @@
 		color: white;
 		font-size: 3.2rem;
 		line-height: 2rem;
-		font-weight: bold;
 
 		&_orange {
 			color: $orange;
 		}
 
+		&_atom {
+			padding-top: 0px;
+			font-family: 'Gotham Pro Regular';
+			font-size: 1rem;
+			line-height: 2rem;
+			text-align: center;
+			color: #ccc;
+		}
+
 		&_big {
 			font-size: 3.7rem;
+		}
+
+		&_medium {
+			font-size: 2.7rem;
 		}
 
 		&_small {
@@ -676,10 +706,8 @@
 	}
 
 	&__row {
-		position: absolute;
+		position: relative;
 		z-index: 104;
-		top: 0;
-		left: 0;
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
@@ -701,35 +729,35 @@
 			justify-content: center;
 			align-items: center;
 		}
+	}
 
-		.contacts__feedback {
-			display: flex;
-			flex-direction: column;
+	.contacts__feedback {
+		display: flex;
+		flex-direction: column;
 
-			&-input {
-				background-color: transparent;
-				border-color: #777;
+		&-input {
+			background-color: transparent;
+			border-color: #777;
 
-				&:focus {
-					border-color: $orange;
-				}
-
-				&::placeholder {
-					color: #ccc
-				}
+			&:focus {
+				border-color: $orange;
 			}
 
-			&-agreement {
-				color: white;
+			&::placeholder {
+				color: #fff;
 			}
 		}
 
-		.checkbox {
-			border-color: #777;
+		&-agreement {
+			color: white;
+		}
+	}
 
-			&:active {
-				border-color: $orange;
-			}
+	.checkbox {
+		border-color: #777;
+
+		&:active {
+			border-color: $orange;
 		}
 	}
 }

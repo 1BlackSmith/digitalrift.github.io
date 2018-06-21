@@ -2333,6 +2333,100 @@
   clip: auto; }
 
 /* Цвета */
+@keyframes move-bubble-1 {
+  0% {
+    top: -40px;
+    right: -40px; }
+  100% {
+    top: -30px;
+    right: -30px; } }
+
+@keyframes move-bubble-2 {
+  0% {
+    top: 40px;
+    left: 40px; }
+  100% {
+    top: 50px;
+    left: 50px; } }
+
+@keyframes move-bubble-3 {
+  0% {
+    left: 80px;
+    bottom: 40px; }
+  100% {
+    left: 70px;
+    bottom: 70px; } }
+
+@keyframes move-bubble-4 {
+  0% {
+    left: -60px;
+    bottom: 40%; }
+  100% {
+    left: -70px;
+    bottom: 40%; } }
+
+@keyframes move-bubble-5 {
+  0% {
+    left: -50px;
+    bottom: 50%; }
+  100% {
+    left: -50px;
+    bottom: 60%; } }
+
+@keyframes move-bubble-6 {
+  0% {
+    left: 50%;
+    bottom: -200px; }
+  100% {
+    left: 50%;
+    bottom: -210px; } }
+
+@keyframes move-bubble-7 {
+  0% {
+    left: -100px;
+    bottom: -270px; }
+  100% {
+    left: -105px;
+    bottom: -275px; } }
+
+@keyframes move-bubble-8 {
+  0% {
+    right: -50px;
+    bottom: -300px; }
+  100% {
+    right: -55px;
+    bottom: -305px; } }
+
+@keyframes move-bubble-9 {
+  0% {
+    left: -440px; }
+  100% {
+    left: -460px; } }
+
+@keyframes move-bubble-10 {
+  0% {
+    top: -90px;
+    right: -20px; }
+  100% {
+    top: -80px;
+    right: -10px; } }
+
+@keyframes move-bubble-11 {
+  0% {
+    top: -150px;
+    right: -400px; }
+  100% {
+    top: -160px;
+    right: -410px; } }
+
+@keyframes move-bubble-12 {
+  0% {
+    bottom: -300px;
+    right: 0px; }
+  100% {
+    bottom: -310px;
+    right: -10px; } }
+
 /* Скрытие элемета */
 @keyframes hide {
   from {
@@ -3190,6 +3284,18 @@ small {
   height: 100%;
   width: 100%;
   opacity: 0; }
+  .block-feedback_little .block-feedback__content {
+    width: 500px;
+    height: 720px;
+    background-image: url("../../img/feedback-small-bg.jpg"); }
+  .block-feedback_little .block-feedback__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px 60px; }
+  .block-feedback_little .block-feedback__text-line:first-child {
+    padding-top: 0; }
   .block-feedback_show {
     animation-name: show;
     animation-timing-function: linear;
@@ -3201,19 +3307,25 @@ small {
     animation-duration: 0.4s;
     animation-fill-mode: forwards; }
   .block-feedback__text-block {
-    padding-top: 40px;
-    padding-left: 100px;
     font-family: 'Gotham Pro Bold'; }
   .block-feedback__text-line {
     padding-top: 30px;
     color: white;
     font-size: 3.2rem;
-    line-height: 2rem;
-    font-weight: bold; }
+    line-height: 2rem; }
     .block-feedback__text-line_orange {
       color: #f1995d; }
+    .block-feedback__text-line_atom {
+      padding-top: 0px;
+      font-family: 'Gotham Pro Regular';
+      font-size: 1rem;
+      line-height: 2rem;
+      text-align: center;
+      color: #ccc; }
     .block-feedback__text-line_big {
       font-size: 3.7rem; }
+    .block-feedback__text-line_medium {
+      font-size: 2.7rem; }
     .block-feedback__text-line_small {
       font-size: 2.15rem; }
     .block-feedback__text-line_extra {
@@ -3255,10 +3367,8 @@ small {
     .block-feedback__button-close:hover {
       color: #f1995d; }
   .block-feedback__row {
-    position: absolute;
+    position: relative;
     z-index: 104;
-    top: 0;
-    left: 0;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -3274,19 +3384,19 @@ small {
     .block-feedback__column_right {
       justify-content: center;
       align-items: center; }
-    .block-feedback__column .contacts__feedback {
-      display: flex;
-      flex-direction: column; }
-      .block-feedback__column .contacts__feedback-input {
-        background-color: transparent;
-        border-color: #777; }
-        .block-feedback__column .contacts__feedback-input:focus {
-          border-color: #f1995d; }
-        .block-feedback__column .contacts__feedback-input::placeholder {
-          color: #ccc; }
-      .block-feedback__column .contacts__feedback-agreement {
-        color: white; }
-    .block-feedback__column .checkbox {
+  .block-feedback .contacts__feedback {
+    display: flex;
+    flex-direction: column; }
+    .block-feedback .contacts__feedback-input {
+      background-color: transparent;
       border-color: #777; }
-      .block-feedback__column .checkbox:active {
+      .block-feedback .contacts__feedback-input:focus {
         border-color: #f1995d; }
+      .block-feedback .contacts__feedback-input::placeholder {
+        color: #fff; }
+    .block-feedback .contacts__feedback-agreement {
+      color: white; }
+  .block-feedback .checkbox {
+    border-color: #777; }
+    .block-feedback .checkbox:active {
+      border-color: #f1995d; }
