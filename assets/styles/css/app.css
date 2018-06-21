@@ -2894,7 +2894,7 @@ small {
 
 /* Главный экран */
 .main {
-  background-image: url(../../img/main-display-bg.png);
+  background-image: url(../../img/main-display-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2954,7 +2954,7 @@ small {
   margin-top: -120px;
   margin-bottom: 380px;
   padding-top: 152px;
-  background-image: url(../../img/services-bg.png);
+  background-image: url(../../img/services-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -3032,7 +3032,7 @@ small {
   margin-bottom: 30px;
   padding-top: 170px;
   padding-bottom: 320px;
-  background-image: url(../../img/presentation-bg.png);
+  background-image: url(../../img/presentation-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3043,6 +3043,10 @@ small {
     font-size: 1.1111rem; }
   .presentation__btn {
     margin-top: 50px; }
+  .presentation__photo-container {
+    position: absolute;
+    top: -274px;
+    left: -35px; }
   .presentation__manager {
     margin-top: 80px;
     margin-right: 50px;
@@ -3329,7 +3333,7 @@ small {
     width: 1100px;
     height: 700px;
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.4);
-    background-color: #046bcc;
+    background-color: #3b9dff;
     background-image: url("../../img/feedback-bg.png");
     background-size: cover; }
   .block-feedback__button-close {
