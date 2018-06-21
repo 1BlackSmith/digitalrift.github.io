@@ -618,6 +618,8 @@
 	}
 
 	&__text-block {
+		padding-top: 40px;
+		padding-left: 100px;
 		font-family: 'Gotham Pro Bold';
 	}
 
@@ -655,7 +657,7 @@
 		&_extra {
 			font-size: 10rem;
 			line-height: 9rem;
-			text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+			text-shadow: -5px 20px 40px rgba(0,0,0,.15);
 		}
 	}
 
