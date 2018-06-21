@@ -3200,6 +3200,9 @@ small {
     justify-content: flex-start;
     align-items: center;
     padding: 100px 60px; }
+  .block-feedback_little .block-feedback__text-block {
+    padding-top: 0;
+    padding-left: 0; }
   .block-feedback_little .block-feedback__text-line:first-child {
     padding-top: 0; }
   .block-feedback_show {
@@ -3213,7 +3216,7 @@ small {
     animation-duration: 0.4s;
     animation-fill-mode: forwards; }
   .block-feedback__text-block {
-    padding-top: 40px;
+    padding-top: 20px;
     padding-left: 100px;
     font-family: 'Gotham Pro Bold'; }
   .block-feedback__text-line {
