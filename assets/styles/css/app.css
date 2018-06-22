@@ -2347,6 +2347,13 @@
   to {
     opacity: 1; } }
 
+/* Анимация планет */
+@keyframes planet-move {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 /* =========================================================== 
  * Шрифты
  * ===========================================================
@@ -2795,9 +2802,6 @@ small {
     padding: 0 40px;
     text-decoration: underline; }
 
-.planets {
-  display: none; }
-
 /* Главный экран */
 .main {
   background-image: url(../../img/main-display-bg.jpg);
@@ -2824,6 +2828,7 @@ small {
 
 /* Раздел "Преимущества" */
 .advantages {
+  position: relative;
   margin-top: 140px; }
   .advantages__title {
     display: flex;
@@ -3216,7 +3221,6 @@ small {
     animation-duration: 0.4s;
     animation-fill-mode: forwards; }
   .block-feedback__text-block {
-    padding-top: 20px;
     padding-left: 100px;
     font-family: 'Gotham Pro Bold'; }
   .block-feedback__text-line {
@@ -3311,3 +3315,34 @@ small {
     border-color: #777; }
     .block-feedback .checkbox:active {
       border-color: #f1995d; }
+
+/* Вращающиеся планеты */
+.planets {
+  position: absolute;
+  right: -240px;
+  width: 480px;
+  height: 480px;
+  background-image: url("../../img/planets-center.png");
+  background-size: cover; }
+  .planets__planet {
+    position: absolute;
+    background-size: cover;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: planet-move; }
+  .planets__planet_1 {
+    top: 76px;
+    left: -28px;
+    width: 265px;
+    height: 168px;
+    background-image: url("../../img/planet-1.png");
+    transform-origin: 100% 100% 0;
+    animation-duration: 12s; }
+  .planets__planet_2 {
+    top: 234px;
+    left: 116px;
+    width: 135px;
+    height: 235px;
+    background-image: url("../../img/planet-2.png");
+    transform-origin: 100% 0 0;
+    animation-duration: 8s; }

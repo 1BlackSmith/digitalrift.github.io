@@ -12,10 +12,6 @@
 @import 'blocks/footer.scss';
 
 
-// TODO: подумать что делать с планетами
-.planets { display: none; }
-
-
 /* Главный экран */
 .main {
 	background-image: url(../../img/main-display-bg.jpg);
@@ -57,6 +53,7 @@
 
 /* Раздел "Преимущества" */
 .advantages {
+	position: relative;
 	margin-top: 140px;
 
 	&__title {
@@ -623,7 +620,6 @@
 	}
 
 	&__text-block {
-		padding-top: 20px;
 		padding-left: 100px;
 		font-family: 'Gotham Pro Bold';
 	}
@@ -766,5 +762,47 @@
 		&:active {
 			border-color: $orange;
 		}
+	}
+}
+
+
+/* Вращающиеся планеты */
+.planets {
+	position: absolute;
+	// right: 140px;
+	right: -240px;
+	width: 480px;
+	height: 480px;
+	background-image: url("../../img/planets-center.png");
+	background-size: cover;
+	// background-color: #ccc;
+
+	&__planet {
+		position: absolute;
+		background-size: cover;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-name: planet-move;
+		// background-color: gray;
+	}
+
+	&__planet_1 {
+		top: 76px;
+		left: -28px;
+		width: 265px;
+		height: 168px;
+		background-image: url("../../img/planet-1.png");
+		transform-origin: 100% 100% 0;
+		animation-duration: 12s;
+	}
+
+	&__planet_2 {
+		top: 234px;
+		left: 116px;
+		width: 135px;
+		height: 235px;
+		background-image: url("../../img/planet-2.png");
+		transform-origin: 100% 0 0;
+		animation-duration: 8s;
 	}
 }
