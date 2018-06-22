@@ -55,6 +55,7 @@
 .advantages {
 	position: relative;
 	margin-top: 140px;
+	overflow: hidden;
 
 	&__title {
 		display: flex;
@@ -273,6 +274,7 @@
 
 /* Раздел "Контакты" */
 .contacts {
+	overflow: hidden;
 
 	&__title {
 		display: flex;
@@ -769,40 +771,64 @@
 /* Вращающиеся планеты */
 .planets {
 	position: absolute;
-	// right: 140px;
-	right: -240px;
 	width: 480px;
 	height: 480px;
 	background-image: url("../../img/planets-center.png");
 	background-size: cover;
-	// background-color: #ccc;
+
+	&_right {
+		top: 180px;
+		right: -240px;
+	}
+
+	&_left {
+		top: 0px;
+		left: -240px;
+	}
 
 	&__planet {
 		position: absolute;
-		background-size: cover;
+		background-size: contain;
+		background-repeat: no-repeat;
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;
 		animation-name: planet-move;
-		// background-color: gray;
+		transform-origin: 100% 100% 0;
 	}
 
 	&__planet_1 {
-		top: 76px;
-		left: -28px;
-		width: 265px;
-		height: 168px;
-		background-image: url("../../img/planet-1.png");
-		transform-origin: 100% 100% 0;
+		top: 50px;
+		left: -50px;
+		width: 295px;
+		height: 195px;
+		background-image: url("../../img/planet.png");
 		animation-duration: 12s;
 	}
 
 	&__planet_2 {
-		top: 234px;
-		left: 116px;
-		width: 135px;
-		height: 235px;
-		background-image: url("../../img/planet-2.png");
-		transform-origin: 100% 0 0;
-		animation-duration: 8s;
+		top: 90px;
+		left: 0;
+		width: 245px;
+		height: 145px;
+		background-image: url("../../img/planet.png");
+		animation-duration: 9s;
+	}
+
+	&__planet_3 {
+		top: 140px;
+		left: 50;
+		width: 195px;
+		height: 95px;
+		background-image: url("../../img/planet.png");
+		animation-duration: 6s;
+	}
+
+	&__planet_4 {
+		top: 190px;
+		left: 90px;
+		width: 145px;
+		height: 45px;
+		background-image: url("../../img/planet.png");
+		animation-duration: 3s;
 	}
 }

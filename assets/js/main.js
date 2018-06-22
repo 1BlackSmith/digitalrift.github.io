@@ -14,7 +14,6 @@ window.addEventListener('load', function(e) {
     var checkboxs = document.getElementsByClassName('checkbox');
     for (let i = 0; i < checkboxs.length; i++) {
         checkboxs[i].addEventListener('click', function(e) {
-            console.log("+");
             checkboxs[i].classList.toggle('checkbox_active');
         });
     }
