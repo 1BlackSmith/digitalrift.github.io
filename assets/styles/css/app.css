@@ -3426,6 +3426,10 @@ small {
     left: -240px; }
   .planets__planet {
     position: absolute;
+    top: 50px;
+    left: -50px;
+    width: 288px;
+    height: 187px;
     background-size: contain;
     background-repeat: no-repeat;
     animation-timing-function: linear;
@@ -3433,30 +3437,14 @@ small {
     animation-name: planet-move;
     transform-origin: 100% 100% 0; }
   .planets__planet_1 {
-    top: 50px;
-    left: -50px;
-    width: 295px;
-    height: 195px;
-    background-image: url("../../img/planet.png");
-    animation-duration: 12s; }
+    background-image: url("../../img/planet-1.png");
+    animation-duration: 15s; }
   .planets__planet_2 {
-    top: 90px;
-    left: 0;
-    width: 245px;
-    height: 145px;
-    background-image: url("../../img/planet.png");
-    animation-duration: 9s; }
+    background-image: url("../../img/planet-2.png");
+    animation-duration: 13s; }
   .planets__planet_3 {
-    top: 140px;
-    left: 50;
-    width: 195px;
-    height: 95px;
-    background-image: url("../../img/planet.png");
-    animation-duration: 6s; }
+    background-image: url("../../img/planet-3.png");
+    animation-duration: 11s; }
   .planets__planet_4 {
-    top: 190px;
-    left: 90px;
-    width: 145px;
-    height: 45px;
-    background-image: url("../../img/planet.png");
-    animation-duration: 3s; }
+    background-image: url("../../img/planet-4.png");
+    animation-duration: 9s; }
