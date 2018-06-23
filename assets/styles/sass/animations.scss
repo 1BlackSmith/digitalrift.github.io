@@ -133,15 +133,3 @@
         opacity: 1;
     }
 }
-
-
-/* Анимация планет */
-
-@keyframes planet-move {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
