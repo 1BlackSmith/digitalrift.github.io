@@ -14,15 +14,16 @@
 	&__text {
 		position: absolute;
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translateX(-75%);
 		color: $blue;
 	}
 
 	&__social {
 
 		&-link {
-			padding: 0 40px;
-			text-decoration: underline;
+			margin: 0 40px;
+			border-bottom: 1px solid $gray;
+			padding: 1px 0;
 		}
 	}
 }

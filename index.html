@@ -12,366 +12,27 @@
 		<link rel="stylesheet" href="assets/styles/css/app.css">
 	</head>
 	<body>
+		
+		<!-- Обертка страницы -->
+		<div class="page-wrapper">
 
-		<!-- Блок обратного звонка Маленький -->
-		<div class="block-feedback block-feedback_little" id="blockFeedbackLittle">
-			<div class="block-feedback__shadow"></div>
-			<div class="block-feedback__container">
-				<div class="block-feedback__content">
-					<div class="block-feedback__row">
-						<div class="block-feedback__button-close closeBlockFeedback">
-							<i class="fa fa-times" aria-hidden="true"></i>
-						</div>
-						<div class="block-feedback__text-block">
-							<div class="block-feedback__text-line block-feedback__text-line_medium">Оставьте заявку</div>
-							<div class="block-feedback__text-line block-feedback__text-line_atom" style="padding-top: 40px;">Здравствуйте!</div>
-							<div class="block-feedback__text-line block-feedback__text-line_atom">Оставьте номер, и мы Вам перезвоним!</div>
-						</div>
-						<form class="contacts__feedback" action="">
-							<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
-							<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
-							<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
-							<div class="contacts__feedback-agreement">
-								<div class="checkbox">
-									<div class="checkbox__point"></div>
-								</div>
-								<span>Нажимая кнопку "Отправить заявку",<br>я даю согласие данному сайту на <br>обработку моих персональных данных</span>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Блок обратного звонка Большой -->
-		<div class="block-feedback" id="blockFeedbackBig">
+			<!-- Блок обратного звонка Маленький -->
+			<div class="block-feedback block-feedback_little" id="blockFeedbackLittle">
 				<div class="block-feedback__shadow"></div>
 				<div class="block-feedback__container">
 					<div class="block-feedback__content">
 						<div class="block-feedback__row">
-							<div class="block-feedback__column block-feedback__column_left">
-								<div class="block-feedback__text-block">
-									<div class="block-feedback__text-line">Получите сайт</div>
-									<div class="block-feedback__text-line block-feedback__text-line_orange block-feedback__text-line_big">в рассрочку</div>
-									<div class="block-feedback__text-line block-feedback__text-line_small">быстро и со скидкой</div>
-									<div class="block-feedback__text-line block-feedback__text-line_extra block-feedback__text-line_orange">20%</div>
-								</div>
+							<div class="block-feedback__button-close closeBlockFeedback">
+								<i class="fa fa-times" aria-hidden="true"></i>
 							</div>
-							<div class="block-feedback__column block-feedback__column_right">
-								<div class="block-feedback__button-close">
-									<i class="fa fa-times" aria-hidden="true"></i>
-								</div>
-								<form class="contacts__feedback" action="">
-									<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
-									<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
-									<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
-									<div class="contacts__feedback-agreement">
-										<div class="checkbox">
-											<div class="checkbox__point"></div>
-										</div>
-										<span>Нажимая кнопку "Отправить заявку",<br>я даю согласие данному сайту на <br>обработку моих персональных данных</span>
-									</div>
-								</form>
+							<div class="block-feedback__text-block">
+								<div class="block-feedback__text-line block-feedback__text-line_medium">Оставьте заявку</div>
+								<div class="block-feedback__text-line block-feedback__text-line_atom" style="padding-top: 40px;">Здравствуйте!</div>
+								<div class="block-feedback__text-line block-feedback__text-line_atom">Оставьте номер, и мы Вам перезвоним!</div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		<!-- Блок, показываемый в момент загрузки страницы -->
-		<div class="block-loading" id="blockLoading">
-			<div class="block-loading__picture"></div>
-		</div>
-
-		<!-- Вертикальные полоски -->
-		<div class="back-layout"></div>
-
-		<!-- Главный экран -->
-		<section class="main section">
-			<div class="container">
-				<!-- Хедер -->
-				<header class="header">
-					<div class="row align-items-center">
-						<a class="header__brand col-3"><img class="header__brand-img" src="assets/img/logo.svg" alt="Логотип компании Digital Rift"> digital rift</a>
-						<nav class="header__nav col-6">
-							<ul class="header__nav_list">
-								<li class="header__nav_list-item">
-									<a class="header__nav_list-link header__nav_list-link--disabled" href="#">Проекты</a>
-								</li>
-								<li class="header__nav_list-item"><a class="header__nav_list-link" href="/services">Услуги</a></li>
-								<li class="header__nav_list-item">
-									<a class="header__nav_list-link header__nav_list-link--disabled" href="#">
-										<div class="tooltip">
-											<div class="tooltip__container">
-												<div class="tooltip__text">В разработке</div>
-											</div>
-											<div class="tooltip__triangle"></div>
-										</div>
-										Отзывы
-									</a>
-								</li>
-								<li class="header__nav_list-item"><a class="header__nav_list-link" href="/contacts">Контакты</a></li>
-							</ul>
-						</nav>
-						<div class="header__contacts col-3">
-							<div class="header__contacts-phone">+7 (920) 820-91-41</div>
-							<a class="header__contacts-feedback blockFeedbackShowLittle">Обратный звонок</a>
-						</div>
-					</div>
-				</header>
-				<div class="row">
-					<div class="main__left col-7">
-						<div class="section__title main__title">
-							<div class="section__title-head main__title-head">Новый взгляд</div>
-							<div class="section__title-subhead main__title-subhead">На бизнес в сети</div>
-						</div>
-						<p class="main__text">Правильно преподнесенная идея – залог успеха. Обратим внимание клиентов на ваш бизнес и сэкономим ваши деньги. Индивидуальные решения и поэтапная оплата услуг – лучшие условия для старта.</p>
-						<button class="btn blockFeedbackShowBig">Заказать сайт в рассрочку!</button>
-					</div>
-					<div class="main__right col-5">
-						<div class="bubble bubble_1"></div>
-						<div class="bubble bubble_2"></div>
-						<div class="bubble bubble_3"></div>
-						<img class="main__img-phone" src="assets/img/main-display-phone.png" alt="">
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Преимущества -->
-		<section class="advantages section">
-			<div class="planets planets_left">
-				<div class="planets__planet planets__planet_2"></div>
-				<div class="planets__planet planets__planet_3"></div>
-				<div class="planets__planet planets__planet_4"></div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="section__title advantages__title">
-							<div class="section__title-number"><img src="assets/img/numbers/3.png" alt="3"></div>
-							<div class="section__title-head-wrap">
-								<span class="section__title-head">Причины</span>
-								<span class="section__title-subhead">Почему стоит обратиться к нам</span>
-							</div>
-							<div class="section__title-line"></div>
-							<div class="section__title-caption">наши ориентиры</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="advantages__item-wrap col-4">
-						<div class="advantages__item">
-							<div class="bubble bubble_4"></div>
-							<div class="bubble bubble_5"></div>
-							<img class="advantages__item-number" src="assets/img/numbers/01.png" alt="01">
-							<div class="advantages__item-head">Внимательность <br>во всем</div>
-							<p>Уважением к индивидуальным особенностям брендов и освещение преимущества компаний наших клиентов. Сохранение индивидуальности бренда. Контроль всех проектов.</p>
-						</div>
-					</div>
-					<div class="advantages__item-wrap col-4">
-						<div class="advantages__item">
-							<img class="advantages__item-number" src="assets/img/numbers/02.png" alt="02">
-							<div class="advantages__item-head">Железные <br>сроки</div>
-							<p>Опыт работы и индивидуальные наработки позволяют нам наладить эффективное взаимодействие со всеми задействованными в процессе работы специалистами.</p>
-							<p>Все проекты выполняются в сроки, указанные в договоре.</p>
-						</div>
-					</div>
-					<div class="advantages__item-wrap col-4">
-						<div class="advantages__item">
-							<div class="bubble bubble_6"></div>
-							<div class="bubble bubble_7"></div>
-							<div class="bubble bubble_8"></div>
-							<img class="advantages__item-number" src="assets/img/numbers/03.png" alt="03">
-							<div class="advantages__item-head">Отсутствие <br>скрытых платежей</div>
-							<p>Наши клиенты платят только за реально оказанные услуги. Вам не придется платить за обслуживание в бизнес-центре класса А или В+, расположение офиса в центре города, красивый вид из окна и другие не относящиеся к вашему проекту пункты.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Услуги -->
-		<section class="services section">
-			<div class="container">
-				<div class="services__inner">
-					<div class="row">
-						<div class="col-12">
-							<div class="section__title services__title">
-								<div class="section__title-head services__title-head">Направление</div>
-								<div class="section__title-subhead services__title-head">Наших услуг</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="services__item-wrap col-6">
-							<div class="services__item">
-								<div class="bubble bubble_9"></div>
-								<div class="services__item-head">Разработка сайтов <br>под ключ</div>
-								<p class="services__item-text">Вы получите готовый к работе веб-сайт со всем наполнением, а также приятным бонусом для Вас, подробности уточняйте у  специалиста, который ведет ваш проект.</p>
-							</div>
-						</div>
-						<div class="services__item-wrap col-6">
-							<div class="services__item">
-								<div class="services__item-head">Фирменный стиль <br>и логотип</div>
-								<p class="services__item-text">Визуальный образ бренда в сочетании с выполненным в едином стиле набором графических элементов (логотип, визитки, бланки, конверты).</p>
-							</div>
-						</div>
-						<div class="services__item-wrap col-6">
-							<div class="services__item">
-								<div class="services__item-head">Настройка контекстной <br>рекламы</div>
-								<p class="services__item-text">Разработка стратегии показа рекламных объявлений, разаработка РСЯ баннеров для Яндекс.Директ и прочие приятные дополнения связанный с рекламой вашего бренда.</p>
-							</div>
-						</div>
-						<div class="services__item-wrap col-6">
-							<div class="services__item">
-								<div class="services__item-head">Продвижение <br>в социальных сетях</div>
-								<p class="services__item-text">Повышение узнаваемости бренда путем рекламы в социальных сетях, работаем по уже сформированной стратегии, которая начинает работать с 1 дня размещения постов.</p>
-							</div>
-						</div>
-					</div>
-					<div class="row justify-content-center">
-						<button class="btn blockFeedbackShowBig">Получить консультанцию</button>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Шаги к идеальному дизайну -->
-		<section class="steps section">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="section__title steps__title">
-							<div class="section__title-number"><img src="assets/img/numbers/6.png" alt="6"></div>
-							<div class="section__title-head-wrap">
-								<span class="section__title-head">Шагов</span>
-								<span class="section__title-subhead">На пути <br>к идеальному дизайну</span>
-							</div>
-							<div class="section__title-line steps__title-line"></div>
-							<div class="section__title-caption steps__title-caption">узнайте,<br> за что вы платите</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="steps__item-wrap col-4">
-						<div class="steps__item">
-							<img class="steps__item-number" src="assets/img/numbers/01.png" alt="01">
-							<div class="steps__item-head">Оформление <br>заявки</div>
-							<p class="steps__item-text">После получения вашей заявки с вами свяжется наш специалист для обсуждения нюансов проекта.</p>
-						</div>
-					</div>
-					<div class="steps__item-wrap col-4">
-						<div class="steps__item">
-							<img class="steps__item-number" src="assets/img/numbers/02.png" alt="02">
-							<div class="steps__item-head">Заполние <br>брифа</div>
-							<p class="steps__item-text">Бриф  позволяют в полной мере отобразить все важные для клиента моменты.</p>
-						</div>
-					</div>
-					<div class="steps__item-wrap col-4">
-						<div class="steps__item">
-							<img class="steps__item-number" src="assets/img/numbers/03.png" alt="03">
-							<div class="steps__item-head">Подписание <br>договора</div>
-							<p class="steps__item-text">Сроки выполнения работ, условия оплаты и другие значимые моменты прописывается в договоре.</p>
-						</div>
-					</div>
-					<div class="steps__item-wrap col-4">
-						<div class="steps__item">
-							<img class="steps__item-number" src="assets/img/numbers/04.png" alt="04">
-							<div class="steps__item-head">Утверждение <br>дизайна</div>
-							<p class="steps__item-text">Готовый макет сайта высылается заказчику, который утверждает его после внесения правок.</p>
-						</div>
-					</div>
-					<div class="steps__item-wrap col-4">
-						<div class="steps__item">
-							<img class="steps__item-number" src="assets/img/numbers/05.png" alt="05">
-							<div class="steps__item-head">Программирование <br>сайта</div>
-							<p class="steps__item-text">Дизайн-макет сайта переводится в код и выкладывается на зарегистрированный на заказчика хостинг.</p>
-						</div>
-					</div>
-					<div class="steps__item-wrap col-4">
-						<div class="steps__item">
-							<img class="steps__item-number" src="assets/img/numbers/06.png" alt="06">
-							<div class="steps__item-head">Контекстная <br>реклама</div>
-							<p class="steps__item-text">Настройка контекстной рекламы в Яндекс-директ.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Презентация -->
-		<section class="presentation section">
-			<div class="container">
-				<div class="row">
-					<div class="col-6">
-						<div class="section__title presentation__title">
-							<div class="section__title-head presentation__title-head">Презентация</div>
-							<div class="section__title-subhead presentation__title-subhead">Наших проектов</div>
-						</div>
-						<p class="presentation__text">Идеальный бизнес-план и наличие стартового капитала — <br>далеко не единственное, что вам потребуется. Для покорения вершин вам понадобятся люди, которые займутся реализацией ваших планов.</p>
-						<p class="presentation__text">Мы знаем, как обратить внимание клиентов на ваш бизнес <br>и сэкономить ваши деньги.</p>
-						<a class="presentation__btn btn" href="docs/1.docx" download="">Скачать презентацию</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-7">
-						<div class="presentation__manager">
-							<div class="bubble bubble_10"></div>
-							<div class="bubble bubble_11"></div>
-							<div class="bubble bubble_12"></div>
-							<div class="presentation__manager-name">Даниил <span class="presentation__manager-surname">Малыгин</span></div>
-							<div class="presentation__manager-desc">ваш проводник в мир<br>крутых сайтов</div>
-						</div>
-					</div>
-					<div class="col-5" style="position:relative;">
-						<div class="presentation__photo-container">
-							<img src="assets/img/danil-photo.png" alt="Даниил Малыгин" width="504" height="748">
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Контакты -->
-		<section class="contacts section">
-			<div class="planets planets_right">
-				<div class="planets__planet planets__planet_1"></div>
-				<div class="planets__planet planets__planet_2"></div>
-				<div class="planets__planet planets__planet_3"></div>
-				<div class="planets__planet planets__planet_4"></div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="section__title contacts__title">
-							<div class="section__title-number contacts__title-number"><img src="assets/img/numbers/24.png" alt="24"></div>
-							<div class="section__title-head-wrap">
-								<span class="section__title-head">Часа</span>
-								<span class="section__title-subhead">На связи <br>и готовы вам помочь</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-4">
-						<div class="contacts__item">
-							<div class="contacts__item-head">Позвоните:</div>
-							<div class="container__item-text">8 (920) 820-91-41</div>
-						</div>
-						<div class="contacts__item contacts__item--download">
-							<div class="contacts__item-head">Скачайте:</div>
-							<a class="contacts__item-link" href="docs/presentation.pdf" download="">Презентацию (*pdf)</a>
-							<a class="contacts__item-link" href="docs/brif.doc" download="">Бриф (*doc)</a>
-						</div>
-					</div>
-					<div class="col-4">
-						<div class="contacts__item">
-							<div class="contacts__item-head">Напишите:</div>
-							<div class="contacts__item-text">digitalrift@yandex.ru</div>
-						</div>
-					</div>
-					<div class="col-4">
-						<div class="contacts__item contacts__item--feedback">
-							<div class="contacts__item-head">Получите персональную <br>консультацию</div>
 							<form class="contacts__feedback" action="">
 								<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
-								<input class="contacts__feedback-input" type="phone" name="phone" placeholder="Ваш телефон:">
+								<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
 								<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
 								<div class="contacts__feedback-agreement">
 									<div class="checkbox">
@@ -384,18 +45,362 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<footer class="footer">
-			<div class="container">
-				<div class="footer__inner">
-					<div class="footer__copyright">© 2018 DigitalRift</div>
-					<div class="footer__text">Давайте сделаем крутой сайт вместе!</div>
-					<div class="footer__social">
-						<a class="footer__social-link" href="https://vk.com" target="_blank">ВКонтакте</a>
-						<a class="footer__social-link" href="https://instagram.com" target="_blank">Instagram</a>
+
+			<!-- Блок обратного звонка Большой -->
+			<div class="block-feedback" id="blockFeedbackBig">
+					<div class="block-feedback__shadow"></div>
+					<div class="block-feedback__container">
+						<div class="block-feedback__content">
+							<div class="block-feedback__row">
+								<div class="block-feedback__column block-feedback__column_left">
+									<div class="block-feedback__text-block">
+										<div class="block-feedback__text-line">Получите сайт</div>
+										<div class="block-feedback__text-line block-feedback__text-line_orange block-feedback__text-line_big">в рассрочку</div>
+										<div class="block-feedback__text-line block-feedback__text-line_small">быстро и со скидкой</div>
+										<div class="block-feedback__text-line block-feedback__text-line_extra block-feedback__text-line_orange">20%</div>
+									</div>
+								</div>
+								<div class="block-feedback__column block-feedback__column_right">
+									<div class="block-feedback__button-close">
+										<i class="fa fa-times" aria-hidden="true"></i>
+									</div>
+									<form class="contacts__feedback" action="">
+										<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
+										<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
+										<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
+										<div class="contacts__feedback-agreement">
+											<div class="checkbox">
+												<div class="checkbox__point"></div>
+											</div>
+											<span>Нажимая кнопку "Отправить заявку",<br>я даю согласие данному сайту на <br>обработку моих персональных данных</span>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+
+			<!-- Блок, показываемый в момент загрузки страницы -->
+			<div class="block-loading" id="blockLoading">
+				<div class="block-loading__picture"></div>
 			</div>
-		</footer>
+
+			<!-- Вертикальные полоски -->
+			<div class="back-layout"></div>
+
+			<!-- Главный экран -->
+			<section class="main section">
+				<div class="container">
+					<!-- Хедер -->
+					<header class="header">
+						<div class="row align-items-center">
+							<a class="header__brand col-3"><img class="header__brand-img" src="assets/img/logo.svg" alt="Логотип компании Digital Rift"> digital rift</a>
+							<nav class="header__nav col-6">
+								<ul class="header__nav_list">
+									<li class="header__nav_list-item">
+										<a class="header__nav_list-link header__nav_list-link--disabled" href="#">Проекты</a>
+									</li>
+									<li class="header__nav_list-item"><a class="header__nav_list-link" href="/services">Услуги</a></li>
+									<li class="header__nav_list-item">
+										<a class="header__nav_list-link header__nav_list-link--disabled" href="#">
+											<div class="tooltip">
+												<div class="tooltip__container">
+													<div class="tooltip__text">В разработке</div>
+												</div>
+												<div class="tooltip__triangle"></div>
+											</div>
+											Отзывы
+										</a>
+									</li>
+									<li class="header__nav_list-item"><a class="header__nav_list-link" href="/contacts">Контакты</a></li>
+								</ul>
+							</nav>
+							<div class="header__contacts col-3">
+								<div class="header__contacts-phone">+7 (920) 820-91-41</div>
+								<a class="header__contacts-feedback blockFeedbackShowLittle">Обратный звонок</a>
+							</div>
+						</div>
+					</header>
+					<div class="row">
+						<div class="main__left col-7">
+							<div class="section__title main__title">
+								<div class="section__title-head main__title-head">Новый взгляд</div>
+								<div class="section__title-subhead main__title-subhead">На бизнес в сети</div>
+							</div>
+							<p class="main__text">Правильно преподнесенная идея – залог успеха. Обратим внимание клиентов на ваш бизнес и сэкономим ваши деньги. Индивидуальные решения и поэтапная оплата услуг – лучшие условия для старта.</p>
+							<button class="btn blockFeedbackShowBig">Заказать сайт в рассрочку!</button>
+						</div>
+						<div class="main__right col-5">
+							<div class="bubble bubble_1"></div>
+							<div class="bubble bubble_2"></div>
+							<div class="bubble bubble_3"></div>
+							<img class="main__img-phone" src="assets/img/main-display-phone.png" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Преимущества -->
+			<section class="advantages section">
+				<div class="planets planets_left">
+					<div class="planets__planet planets__planet_2"></div>
+					<div class="planets__planet planets__planet_3"></div>
+					<div class="planets__planet planets__planet_4"></div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section__title advantages__title">
+								<div class="section__title-number"><img src="assets/img/numbers/3.png" alt="3"></div>
+								<div class="section__title-head-wrap">
+									<span class="section__title-head">Причины</span>
+									<span class="section__title-subhead">Почему стоит обратиться к нам</span>
+								</div>
+								<div class="section__title-line"></div>
+								<div class="section__title-caption">наши ориентиры</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="advantages__item-wrap col-4">
+							<div class="advantages__item">
+								<div class="bubble bubble_4"></div>
+								<div class="bubble bubble_5"></div>
+								<img class="advantages__item-number" src="assets/img/numbers/01.png" alt="01">
+								<div class="advantages__item-head">Внимательность <br>во всем</div>
+								<p>Уважением к индивидуальным особенностям брендов и освещение преимущества компаний наших клиентов. Сохранение индивидуальности бренда. Контроль всех проектов.</p>
+							</div>
+						</div>
+						<div class="advantages__item-wrap col-4">
+							<div class="advantages__item">
+								<img class="advantages__item-number" src="assets/img/numbers/02.png" alt="02">
+								<div class="advantages__item-head">Железные <br>сроки</div>
+								<p>Опыт работы и индивидуальные наработки позволяют нам наладить эффективное взаимодействие со всеми задействованными в процессе работы специалистами.</p>
+								<p>Все проекты выполняются в сроки, указанные в договоре.</p>
+							</div>
+						</div>
+						<div class="advantages__item-wrap col-4">
+							<div class="advantages__item">
+								<div class="bubble bubble_6"></div>
+								<div class="bubble bubble_7"></div>
+								<div class="bubble bubble_8"></div>
+								<img class="advantages__item-number" src="assets/img/numbers/03.png" alt="03">
+								<div class="advantages__item-head">Отсутствие <br>скрытых платежей</div>
+								<p>Наши клиенты платят только за реально оказанные услуги. Вам не придется платить за обслуживание в бизнес-центре класса А или В+, расположение офиса в центре города, красивый вид из окна и другие не относящиеся к вашему проекту пункты.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Услуги -->
+			<section class="services section">
+				<div class="container">
+					<div class="services__inner">
+						<div class="row">
+							<div class="col-12">
+								<div class="section__title services__title">
+									<div class="section__title-head services__title-head">Направление</div>
+									<div class="section__title-subhead services__title-head">Наших услуг</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="services__item-wrap col-6">
+								<div class="services__item">
+									<div class="bubble bubble_9"></div>
+									<div class="services__item-head">Разработка сайтов <br>под ключ</div>
+									<p class="services__item-text">Вы получите готовый к работе веб-сайт со всем наполнением, а также приятным бонусом для Вас, подробности уточняйте у  специалиста, который ведет ваш проект.</p>
+								</div>
+							</div>
+							<div class="services__item-wrap col-6">
+								<div class="services__item">
+									<div class="services__item-head">Фирменный стиль <br>и логотип</div>
+									<p class="services__item-text">Визуальный образ бренда в сочетании с выполненным в едином стиле набором графических элементов (логотип, визитки, бланки, конверты).</p>
+								</div>
+							</div>
+							<div class="services__item-wrap col-6">
+								<div class="services__item">
+									<div class="services__item-head">Настройка контекстной <br>рекламы</div>
+									<p class="services__item-text">Разработка стратегии показа рекламных объявлений, разаработка РСЯ баннеров для Яндекс.Директ и прочие приятные дополнения связанный с рекламой вашего бренда.</p>
+								</div>
+							</div>
+							<div class="services__item-wrap col-6">
+								<div class="services__item">
+									<div class="services__item-head">Продвижение <br>в социальных сетях</div>
+									<p class="services__item-text">Повышение узнаваемости бренда путем рекламы в социальных сетях, работаем по уже сформированной стратегии, которая начинает работать с 1 дня размещения постов.</p>
+								</div>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<button class="btn blockFeedbackShowBig">Получить консультанцию</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Шаги к идеальному дизайну -->
+			<section class="steps section">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section__title steps__title">
+								<div class="section__title-number"><img src="assets/img/numbers/6.png" alt="6"></div>
+								<div class="section__title-head-wrap">
+									<span class="section__title-head">Шагов</span>
+									<span class="section__title-subhead">На пути <br>к идеальному дизайну</span>
+								</div>
+								<div class="section__title-line steps__title-line"></div>
+								<div class="section__title-caption steps__title-caption">узнайте,<br> за что вы платите</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="steps__item-wrap col-4">
+							<div class="steps__item">
+								<img class="steps__item-number" src="assets/img/numbers/01.png" alt="01">
+								<div class="steps__item-head">Оформление <br>заявки</div>
+								<p class="steps__item-text">После получения вашей заявки с вами свяжется наш специалист для обсуждения нюансов проекта.</p>
+							</div>
+						</div>
+						<div class="steps__item-wrap col-4">
+							<div class="steps__item">
+								<img class="steps__item-number" src="assets/img/numbers/02.png" alt="02">
+								<div class="steps__item-head">Заполние <br>брифа</div>
+								<p class="steps__item-text">Бриф  позволяют в полной мере отобразить все важные для клиента моменты.</p>
+							</div>
+						</div>
+						<div class="steps__item-wrap col-4">
+							<div class="steps__item">
+								<img class="steps__item-number" src="assets/img/numbers/03.png" alt="03">
+								<div class="steps__item-head">Подписание <br>договора</div>
+								<p class="steps__item-text">Сроки выполнения работ, условия оплаты и другие значимые моменты прописывается в договоре.</p>
+							</div>
+						</div>
+						<div class="steps__item-wrap col-4">
+							<div class="steps__item">
+								<img class="steps__item-number" src="assets/img/numbers/04.png" alt="04">
+								<div class="steps__item-head">Утверждение <br>дизайна</div>
+								<p class="steps__item-text">Готовый макет сайта высылается заказчику, который утверждает его после внесения правок.</p>
+							</div>
+						</div>
+						<div class="steps__item-wrap col-4">
+							<div class="steps__item">
+								<img class="steps__item-number" src="assets/img/numbers/05.png" alt="05">
+								<div class="steps__item-head">Программирование <br>сайта</div>
+								<p class="steps__item-text">Дизайн-макет сайта переводится в код и выкладывается на зарегистрированный на заказчика хостинг.</p>
+							</div>
+						</div>
+						<div class="steps__item-wrap col-4">
+							<div class="steps__item">
+								<img class="steps__item-number" src="assets/img/numbers/06.png" alt="06">
+								<div class="steps__item-head">Контекстная <br>реклама</div>
+								<p class="steps__item-text">Настройка контекстной рекламы в Яндекс-директ.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Презентация -->
+			<section class="presentation section">
+				<div class="container">
+					<div class="row">
+						<div class="col-6">
+							<div class="section__title presentation__title">
+								<div class="section__title-head presentation__title-head">Презентация</div>
+								<div class="section__title-subhead presentation__title-subhead">Наших проектов</div>
+							</div>
+							<p class="presentation__text">Идеальный бизнес-план и наличие стартового капитала — <br>далеко не единственное, что вам потребуется. Для покорения вершин вам понадобятся люди, которые займутся реализацией ваших планов.</p>
+							<p class="presentation__text">Мы знаем, как обратить внимание клиентов на ваш бизнес <br>и сэкономить ваши деньги.</p>
+							<a class="presentation__btn btn" href="docs/1.docx" download="">Скачать презентацию</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-7">
+							<div class="presentation__manager">
+								<div class="bubble bubble_10"></div>
+								<div class="bubble bubble_11"></div>
+								<div class="bubble bubble_12"></div>
+								<div class="presentation__manager-name">Даниил <span class="presentation__manager-surname">Малыгин</span></div>
+								<div class="presentation__manager-desc">ваш проводник в мир<br>крутых сайтов</div>
+							</div>
+						</div>
+						<div class="col-5" style="position:relative;">
+							<div class="presentation__photo-container">
+								<img src="assets/img/danil-photo.png" alt="Даниил Малыгин" width="504" height="748">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Контакты -->
+			<section class="contacts section">
+				<div class="planets planets_right">
+					<div class="planets__planet planets__planet_1"></div>
+					<div class="planets__planet planets__planet_2"></div>
+					<div class="planets__planet planets__planet_3"></div>
+					<div class="planets__planet planets__planet_4"></div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section__title contacts__title">
+								<div class="section__title-number contacts__title-number"><img src="assets/img/numbers/24.png" alt="24"></div>
+								<div class="section__title-head-wrap">
+									<span class="section__title-head">Часа</span>
+									<span class="section__title-subhead">На связи <br>и готовы вам помочь</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-4">
+							<div class="contacts__item">
+								<div class="contacts__item-head">Позвоните:</div>
+								<div class="container__item-text">8 (920) 820-91-41</div>
+							</div>
+							<div class="contacts__item contacts__item--download">
+								<div class="contacts__item-head">Скачайте:</div>
+								<a class="contacts__item-link" href="docs/presentation.pdf" download="">Презентацию (*pdf)</a>
+								<a class="contacts__item-link" href="docs/brif.doc" download="">Бриф (*doc)</a>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="contacts__item">
+								<div class="contacts__item-head">Напишите:</div>
+								<div class="contacts__item-text">digitalrift@yandex.ru</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="contacts__item contacts__item--feedback">
+								<div class="contacts__item-head">Получите персональную <br>консультацию</div>
+								<form class="contacts__feedback" action="">
+									<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
+									<input class="contacts__feedback-input" type="phone" name="phone" placeholder="Ваш телефон:">
+									<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
+									<div class="contacts__feedback-agreement">
+										<div class="checkbox">
+											<div class="checkbox__point"></div>
+										</div>
+										<span>Нажимая кнопку "Отправить заявку",<br>я даю согласие данному сайту на <br>обработку моих персональных данных</span>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__inner">
+						<div class="footer__copyright">© 2018 DigitalRift</div>
+						<div class="footer__text">Давайте сделаем крутой сайт вместе!</div>
+						<div class="footer__social">
+							<a class="footer__social-link" href="https://vk.com" target="_blank">ВКонтакте</a>
+							<a class="footer__social-link" href="https://instagram.com" target="_blank">Instagram</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+		</div>
 	</body>
 </html>

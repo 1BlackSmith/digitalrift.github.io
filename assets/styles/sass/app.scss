@@ -55,7 +55,6 @@
 .advantages {
 	position: relative;
 	margin-top: 140px;
-	overflow: hidden;
 
 	&__title {
 		display: flex;
@@ -71,9 +70,9 @@
 		background-color: $white;
 		box-shadow: -5px 20px 40px rgba(0,0,0,.15);
 
-		&:hover &-number{
+		/* &:hover &-number{
 			padding-bottom: 10px;
-		}
+		} */
 
 		&-wrap {
 			display: flex;
@@ -180,9 +179,9 @@
 		color: $white;
 		box-shadow: -5px 20px 40px rgba(0,0,0,.15);
 
-		&:hover &-number {
+		/* &:hover &-number {
 			padding-bottom: 10px;
-		}
+		} */
 
 		&-wrap {
 			display: flex;
@@ -274,7 +273,6 @@
 
 /* Раздел "Контакты" */
 .contacts {
-	overflow: hidden;
 
 	&__title {
 		display: flex;
@@ -365,6 +363,8 @@
 	animation-duration: 2s;
 
 	&_1 {
+		top: -40px;
+    right: -40px;
 		z-index: 100;
 		height: 100px;
 		width: 100px;
@@ -374,6 +374,8 @@
 	}
 
 	&_2 {
+		top: 40px;
+    left: 40px;
 		height: 20px;
 		width: 20px;
 		@include bubble-gradient(to bottom);
@@ -382,6 +384,8 @@
 	}
 
 	&_3 {
+		left: 80px;
+		bottom: 40px;
 		z-index: 102;
 		height: 160px;
 		width: 160px;
@@ -389,9 +393,12 @@
 		box-shadow: 3px 0 10px 0 $bubble-color-start,
 					-3px 0 10px 0 $bubble-color-end;
 		animation-name: move-bubble-3;
+		animation-duration: 3s;
 	}
 
 	&_4 {
+		left: -60px;
+    bottom: 40%;
 		height: 15px;
 		width: 15px;
 		@include bubble-gradient(to right);
@@ -400,6 +407,8 @@
 	}
 
 	&_5 {
+		left: -50px;
+		bottom: 60%;
 		height: 20px;
 		width: 20px;
 		@include bubble-gradient(to right);
@@ -408,14 +417,19 @@
 	}
 
 	&_6 {
+		left: 50%;
+		bottom: -200px;
 		height: 120px;
 		width: 120px;
 		@include bubble-gradient(to right);
 		box-shadow: 0 0 30px 0 rgba(0,0,0, 0.3);
 		animation-name: move-bubble-6;
+		animation-duration: 3s;
 	}
 
 	&_7 {
+		left: -100px;
+		bottom: -270px;
 		height: 30px;
 		width: 30px;
 		@include bubble-gradient(to left);
@@ -425,52 +439,64 @@
 	}
 
 	&_8 {
+		right: -50px;
+		bottom: -300px;
 		height: 40px;
 		width: 40px;
 		@include bubble-gradient(to right);
 		box-shadow: 0 0 10px 0 rgba(0,0,0, 0.2);
 		animation-name: move-bubble-8;
-		animation-duration: 1s;
 	}
 
 	&_9 {
+		left: -440px;
 		height: 250px;
 		width: 250px;
 		@include bubble-gradient(to bottom);
 		box-shadow: 0 -10px 10px 0 $bubble-color-start,
 					0 5px 10px 0 $bubble-color-end;
 		animation-name: move-bubble-9;
+		animation-duration: 4s;
 	}
 
 	&_10 {
+		top: -90px;
+    right: -20px;
 		height: 20px;
 		width: 20px;
 		@include bubble-gradient(to left);
 		box-shadow: 0 0 10px 0 rgba(0,0,0, 0.2);
 		animation-name: move-bubble-10;
+		animation-duration: 1s;
 	}
 
 	&_11 {
+		top: -150px;
+    right: -400px;
 		height: 90px;
 		width: 90px;
 		@include bubble-gradient(to right);
 		box-shadow: 0 0 30px 0 rgba(0,0,0, 0.2);
 		animation-name: move-bubble-11;
+		animation-duration: 4s;
 	}
 
 	&_12 {
+		bottom: -300px;
+    right: 0px;
 		height: 200px;
 		width: 200px;
 		@include bubble-gradient(to bottom);
 		box-shadow: 0 -10px 10px 0 $bubble-color-start,
 					0 5px 10px 0 $bubble-color-end;
 		animation-name: move-bubble-12;
+		animation-duration: 5s;
 	}
 }
 
 
 /* Секции страницы */
-.section {
+/* .section {
 	.section__title-number img {
 		transition-duration: 1s;
 		transition-timing-function: ease;
@@ -480,7 +506,7 @@
 	&:hover .section__title-number img {
 		transform: rotateY(360deg);
 	}
-}
+} */
 
 
 /* Блок с загрузочным изображением */
