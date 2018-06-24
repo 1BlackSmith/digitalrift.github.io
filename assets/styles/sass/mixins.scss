@@ -7,9 +7,3 @@
             $bubble-color-center 50%,
             $bubble-color-end 100%);
 }
-
-@mixin section-bg() {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-}

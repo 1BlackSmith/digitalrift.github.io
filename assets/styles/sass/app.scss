@@ -14,9 +14,13 @@
 
 /* Главный экран */
 .main {
-	//background-image: url(../../img/main-display-bg.png);
-	//@include section-bg();
 	color: $white;
+	
+	// Фикс перектытия пузыря текста и кнопок
+	.container {
+		position: relative;
+		z-index: 5;
+	}
 
 	&__title {
 		margin-top: 50px;
@@ -96,8 +100,6 @@
 	margin-top: -120px;
 	margin-bottom: 380px;
 	padding-top: 152px;
-	//background-image: url(../../img/services-bg.png);
-	@include section-bg();
 
 	&__inner {
 		position: relative;
@@ -209,8 +211,6 @@
 	margin-bottom: 30px;
 	padding-top: 170px;
 	padding-bottom: 280px;
-	//background-image: url(../../img/presentation-bg.png);
-	@include section-bg();
 	color: $white;
 
 	&__title {
