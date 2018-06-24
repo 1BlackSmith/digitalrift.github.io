@@ -1,4 +1,4 @@
-window.addEventListener('load', function(e) {
+window.addEventListener('load', function( e ) {
 
     /* Плавное исчезновение блока загрузки */
 
@@ -13,7 +13,7 @@ window.addEventListener('load', function(e) {
 
     var checkboxs = document.getElementsByClassName('checkbox');
     for (let i = 0; i < checkboxs.length; i++) {
-        checkboxs[i].addEventListener('click', function(e) {
+        checkboxs[i].addEventListener('click', function( e ) {
             checkboxs[i].classList.toggle('checkbox_active');
         });
     }
@@ -30,7 +30,7 @@ window.addEventListener('load', function(e) {
 
     function bind(block, buttons) {
         for (var i = 0; i < buttons.length; i++) {
-            buttons[i].addEventListener('click', function(e) {
+            buttons[i].addEventListener('click', function( e ) {
                 block.style.display = 'flex';
                 block.classList.add('block-feedback_show');
                 window.setTimeout(function() {
@@ -61,15 +61,20 @@ window.addEventListener('load', function(e) {
 
     /* Появление элементов при скролле */
 
-    var waypoints = document.getElementsByClassName('waypoint');
+    var waypoints = document.getElementsByClassName('wp');
     for (let i = 0; i < waypoints.length; i++) {
         new Waypoint({
             element: waypoints[i],
             handler: function(direction) {
-                console.log(this.element.id + ' triggers at ' + this.triggerPoint);
+                this.element.classList.add('wp--active')
             },
-            offset: '75%'
+            offset: '70%'
         });
     }
+
+
+    /* Плавный скролл страницы */
+
+    SmoothScroll({ stepSize: 150 });
 
 });

@@ -155,3 +155,35 @@
 		transform-origin: center center;
 	}
 }
+
+/* Появление элементов при скроллинге */
+.wp {
+	opacity: 0;
+	transition: all 1s ease;
+
+	// Режимы задержки
+	@for $i from 1 through 4 {
+	  &__delay-#{$i} {
+	  	transition-delay: 1s * $i / 2;
+	  }
+	}
+	
+	// Направление (с какой стороны появится)
+	&__left {
+		transform: translateX(-30px);
+	}
+	&__right {
+		transform: translateX(30px);
+	}
+	&__top {
+		transform: translateY(-30px);
+	}
+	&__bottom {
+		transform: translateY(30px);
+	}
+
+	&--active {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
