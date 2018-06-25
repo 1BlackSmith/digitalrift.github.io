@@ -120,12 +120,11 @@
 		opacity: 1;
 	}
 
-	&:focus,
 	&:active {
 		top: 5px;
 
 		&:before {
-			box-shadow: none;
+			box-shadow: 0 2px 0 0 $darkOrange;
 		}
 	}
 }
@@ -168,29 +167,6 @@
 
 
 /* Анимация */
-@keyframes rotate {
-	from {
-		transform: rotate(0);
-		transform-origin: center center;
-	}
-
-	to {
-		transform: rotate(360deg);
-		transform-origin: center center;
-	}
-}
-
-@keyframes inv-rotate {
-	from {
-		transform: rotate(0);
-		transform-origin: center center;
-	}
-
-	to {
-		transform: rotate(-360deg);
-		transform-origin: center center;
-	}
-}
 
 /* Появление элементов при скроллинге */
 .wp {
@@ -221,5 +197,21 @@
 	&--active {
 		transform: translateX(0);
 		opacity: 1;
+	}
+}
+
+
+/* Пульсация */
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+		opacity: .5;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.5);
+		opacity: 0;
 	}
 }

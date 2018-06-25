@@ -68,7 +68,6 @@ window.addEventListener('load', function( e ) {
     /* Плавный скролл страницы */
 
     SmoothScroll({ 
-        stepSize: 100,
         animationTime: 600 
     });
 

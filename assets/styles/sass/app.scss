@@ -228,7 +228,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		//margin-top: -15px;
+		margin-top: 5px;
 		margin-left: -49px;
 	}
 
@@ -355,7 +355,7 @@
 		transform: translateX(-50%);
 		width: 1170px;
 
-		&--main {
+		&--small {
 			top: 95%;
 		}
 	}
@@ -363,12 +363,28 @@
 	&_1 {
 		top: 185px;
     right: -50px;
-		z-index: 100;
 		height: 100px;
 		width: 100px;
 		@include bubble-gradient(to right);
 		box-shadow: 0 15px 30px 0 rgba(0,0,0, 0.2);
 		animation-name: move-bubble-1;
+
+		&:before,
+		&:after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			border: 1px solid $blue;
+			border-radius: 50%;
+			animation: pulse 1.8s linear infinite;
+			content: "";
+		}
+
+		&:after {
+			animation-delay: 1s;
+		}
 	}
 
 	&_2 {
@@ -461,8 +477,8 @@
 	}
 
 	&_10 {
-		top: -90px;
-    right: -20px;
+		top: 540px;
+    right: 470px;
 		height: 20px;
 		width: 20px;
 		@include bubble-gradient(to left);
@@ -472,8 +488,8 @@
 	}
 
 	&_11 {
-		top: -150px;
-    right: -400px;
+		top: 480px;
+    right: 90px;
 		height: 90px;
 		width: 90px;
 		@include bubble-gradient(to right);
@@ -483,8 +499,8 @@
 	}
 
 	&_12 {
-		bottom: -300px;
-    right: -50px;
+		bottom: -30px;
+    right: 400px;
 		height: 250px;
 		width: 250px;
 		@include bubble-gradient(to bottom);
