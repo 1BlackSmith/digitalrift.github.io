@@ -1,5 +1,3 @@
-@import 'font-awesome.scss';
-
 @import 'variables.scss';
 @import 'mixins.scss';
 @import 'animations.scss';
@@ -8,6 +6,8 @@
 
 @import 'grid.scss';
 
+@import 'modal.scss';
+
 @import 'blocks/header.scss';
 @import 'blocks/footer.scss';
 
@@ -15,12 +15,6 @@
 /* Главный экран */
 .main {
 	color: $white;
-	
-	// Фикс перектытия пузыря текста и кнопок
-	.container {
-		position: relative;
-		z-index: 5;
-	}
 
 	&__title {
 		margin-top: 50px;
@@ -360,6 +354,10 @@
 		bottom: 0;
 		transform: translateX(-50%);
 		width: 1170px;
+
+		&--main {
+			top: 95%;
+		}
 	}
 
 	&_1 {
@@ -384,12 +382,13 @@
 	}
 
 	&_3 {
-		right: 250px;
-		bottom: 40px;
+		right: 220px;
+		bottom: 20px;
 		z-index: 4;
-		height: 160px;
-		width: 160px;
+		height: 250px;
+		width: 250px;
 		@include bubble-gradient(to left);
+		filter: blur(10px);
 		box-shadow: 3px 0 10px 0 $bubble-color-start,
 					-3px 0 10px 0 $bubble-color-end;
 		animation-name: move-bubble-3;
@@ -450,10 +449,11 @@
 
 	&_9 {
 		top: 620px;
-		left: -440px;
-		height: 250px;
-		width: 250px;
+		left: -460px;
+		height: 300px;
+		width: 300px;
 		@include bubble-gradient(to bottom);
+		filter: blur(10px);
 		box-shadow: 0 -10px 10px 0 $bubble-color-start,
 					0 5px 10px 0 $bubble-color-end;
 		animation-name: move-bubble-9;
@@ -483,11 +483,12 @@
 	}
 
 	&_12 {
-		bottom: -250px;
-    right: 0px;
-		height: 200px;
-		width: 200px;
+		bottom: -300px;
+    right: -50px;
+		height: 250px;
+		width: 250px;
 		@include bubble-gradient(to bottom);
+		filter: blur(10px);
 		box-shadow: 0 -10px 10px 0 $bubble-color-start,
 					0 5px 10px 0 $bubble-color-end;
 		animation-name: move-bubble-12;
@@ -539,35 +540,6 @@
 }
 
 
-.checkbox {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 16px;
-	height: 16px;
-	border: 2px solid #ccc;
-	border-radius: 100%;
-	cursor: pointer;
-
-	&_active &__point {
-		visibility: visible;
-	}
-
-	&:active {
-		border-color: #777;
-	}
-
-	&__point {
-		width: 50%;
-		height: 50%;
-		border-radius: 100%;
-		border: 1px solid $orange;
-		background-color: $orange;
-		visibility: hidden;
-	}
-}
-
-
 /* Всплывающая подсказка */
 .tooltip {
 	position: absolute;
@@ -594,202 +566,5 @@
 		width: 10px;
 		border: 5px solid transparent;
 		border-top: 8px solid $yellow;
-	}
-}
-
-
-/* Блок обратного звонка */
-.block-feedback {
-	position: fixed;
-	z-index: 101;
-	top: 0;
-	left: 0;
-	display: none;
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-
-	&_little {
-		.block-feedback__content {
-			width: 500px;
-			height: 720px;
-			background-image: url('../../img/feedback-small-bg.jpg');
-		}
-
-		.block-feedback__row {
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			align-items: center;
-			padding: 100px 60px;
-		}
-
-		.block-feedback__text-block {
-			padding-top: 0;
-			padding-left: 0;
-		}
-
-		.block-feedback__text-line:first-child {
-			padding-top: 0;
-		}
-	}
-
-	&_show {
-		animation-name: show;
-		animation-timing-function: linear;
-		animation-duration: 0.4s;
-		animation-fill-mode: forwards;
-	}
-
-	&_hide {
-		animation-name: hide;
-		animation-timing-function: linear;
-		animation-duration: 0.4s;
-		animation-fill-mode: forwards;
-	}
-
-	&__text-block {
-		padding-left: 100px;
-		font-family: 'Gotham Pro Bold';
-	}
-
-	&__text-line {
-		padding-top: 30px;
-		color: white;
-		font-size: 3.2rem;
-		line-height: 2rem;
-
-		&_orange {
-			color: $orange;
-		}
-
-		&_atom {
-			padding-top: 0px;
-			font-family: 'Gotham Pro Regular';
-			font-size: 1rem;
-			line-height: 2rem;
-			text-align: center;
-			color: #ccc;
-		}
-
-		&_big {
-			font-size: 3.7rem;
-		}
-
-		&_medium {
-			font-size: 2.7rem;
-		}
-
-		&_small {
-			font-size: 2.15rem;
-		}
-
-		&_extra {
-			font-size: 10rem;
-			line-height: 9rem;
-			text-shadow: -5px 20px 40px rgba(0,0,0,.15);
-		}
-	}
-
-	&__shadow {
-		position: absolute;
-		z-index: 101;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		background-color: black;
-		opacity: 0.6;
-	}
-
-	&__container {
-		position: relative;
-		z-index: 102;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-	}
-
-	&__content {
-		position: relative;
-		width: 1100px;
-		height: 700px;
-		box-shadow: 0 4px 15px 0 rgba(0,0,0,0.4);
-		background: {
-			color: #3b9dff;
-			image: url('../../img/feedback-bg.jpg');
-			size: cover;
-		}
-	}
-
-	&__button-close {
-		position: absolute;
-		right: 30px;
-		top: 30px;
-		color: white;
-		font-size: 2rem;
-		cursor: pointer;
-
-		&:hover {
-			color: $orange;
-		}
-	}
-
-	&__row {
-		position: relative;
-		z-index: 104;
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		height: 100%;
-	}
-
-	&__column {
-		position: relative;
-		display: flex;
-		width: 50%;
-
-		&_left {
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-
-		&_right {
-			justify-content: center;
-			align-items: center;
-		}
-	}
-
-	.contacts__feedback {
-		display: flex;
-		flex-direction: column;
-
-		&-input {
-			background-color: transparent;
-			border-color: #777;
-
-			&:focus {
-				border-color: $orange;
-			}
-
-			&::placeholder {
-				color: #fff;
-			}
-		}
-
-		&-agreement {
-			color: white;
-		}
-	}
-
-	.checkbox {
-		border-color: #777;
-
-		&:active {
-			border-color: $orange;
-		}
 	}
 }

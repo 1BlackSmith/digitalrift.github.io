@@ -9,22 +9,12 @@ window.addEventListener('load', function( e ) {
     }, 500);
 
 
-    /* Переключение флажка */
-
-    var checkboxs = document.getElementsByClassName('checkbox');
-    for (let i = 0; i < checkboxs.length; i++) {
-        checkboxs[i].addEventListener('click', function( e ) {
-            checkboxs[i].classList.toggle('checkbox_active');
-        });
-    }
-
-
     /* Открытие блока отправки заявки */
 
     var blockFeedbackBig = document.getElementById('blockFeedbackBig');
     var blockFeedbackLittle = document.getElementById('blockFeedbackLittle');
-    var buttonsShowLittle = document.getElementsByClassName('blockFeedbackShowLittle');
-    var buttonsShowBig = document.getElementsByClassName('blockFeedbackShowBig');
+    var buttonsShowLittle = document.getElementsByClassName('js__blockFeedbackShowLittle');
+    var buttonsShowBig = document.getElementsByClassName('js__blockFeedbackShowBig');
     bind(blockFeedbackBig, buttonsShowBig);
     bind(blockFeedbackLittle, buttonsShowLittle);
 
@@ -32,6 +22,7 @@ window.addEventListener('load', function( e ) {
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].addEventListener('click', function( e ) {
                 block.style.display = 'flex';
+                document.body.classList.add('fixed');
                 block.classList.add('block-feedback_show');
                 window.setTimeout(function() {
                     block.classList.remove('block-feedback_show');
@@ -48,6 +39,7 @@ window.addEventListener('load', function( e ) {
     for (let i = 0; i < blockFeedbacks.length; i++) {
         var closeButton = blockFeedbacks[i].getElementsByClassName('block-feedback__button-close')[0];
         closeButton.addEventListener('click', function(e) {
+            document.body.classList.remove('fixed');
             blockFeedbacks[i].classList.add('block-feedback_hide');
             window.setTimeout(function() {
                 blockFeedbacks[i].style.display = 'none';
@@ -75,6 +67,9 @@ window.addEventListener('load', function( e ) {
 
     /* Плавный скролл страницы */
 
-    SmoothScroll({ stepSize: 150 });
+    SmoothScroll({ 
+        stepSize: 100,
+        animationTime: 600 
+    });
 
 });
