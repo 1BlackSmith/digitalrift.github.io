@@ -5,7 +5,7 @@
 
 .block-feedback {
 	position: fixed;
-	z-index: 101;
+	z-index: 999;
 	top: 0;
 	left: 0;
 	display: none;
@@ -16,16 +16,14 @@
 	&_little {
 		.block-feedback__content {
 			width: 500px;
-			height: 720px;
 			background-image: url('../../img/feedback-small-bg.jpg');
 		}
 
 		.block-feedback__row {
 			display: flex;
 			flex-direction: column;
-			justify-content: flex-start;
 			align-items: center;
-			padding: 100px 60px;
+			padding: 120px 60px;
 		}
 
 		.block-feedback__text-block {
@@ -119,7 +117,7 @@
 	&__content {
 		position: relative;
 		width: 1100px;
-		height: 700px;
+		//height: 700px;
 		background-image: url('../../img/feedback-bg.jpg');
 		background-position: center;
 		background-size: cover;
@@ -184,14 +182,6 @@
 
 		&-agreement {
 			color: white;
-		}
-	}
-
-	.checkbox {
-		border-color: #777;
-
-		&:active {
-			border-color: $orange;
 		}
 	}
 }

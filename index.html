@@ -16,6 +16,31 @@
 		<div class="page-wrapper">
 
 			<!-- Блок обратного звонка Маленький -->
+			<div class="modal" id="feedback-little">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-5">
+							<div class="modal__inner">
+								<span class="modal__close" data-modal-close="feedback-little"><img src="assets/img/icons/close.png" alt=""></span>
+								<div class="modal__title">
+									<div class="modal__title-head">Оставьте заявку</div>
+								</div>
+								<div class="modal__text">Здравствуйте! <br> Оставьте номер, и мы Вам перезвоним!</div>
+								<form class="contacts__feedback" action="">
+									<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
+									<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
+									<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
+									<label class="contacts__feedback-agreement">
+	                  <input type="checkbox" name="agreement" checked>
+	                  <span class="checkbox"></span>
+	                  <div>Нажимая кнопку "Отправить заявку",<br>я даю согласие данному сайту на <br>обработку моих персональных данных</div>
+	                </label>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="block-feedback block-feedback_little" id="blockFeedbackLittle">
 				<div class="block-feedback__shadow"></div>
 				<div class="block-feedback__container">
@@ -24,7 +49,7 @@
 							<div class="block-feedback__button-close"><img src="assets/img/icons/close.png" alt=""></div>
 							<div class="block-feedback__text-block">
 								<div class="block-feedback__text-line block-feedback__text-line_medium">Оставьте заявку</div>
-								<div class="block-feedback__text-line block-feedback__text-line_atom" style="padding-top: 40px;">Здравствуйте!</div>
+								<div class="block-feedback__text-line block-feedback__text-line_atom" style="padding-top: 20px;">Здравствуйте!</div>
 								<div class="block-feedback__text-line block-feedback__text-line_atom">Оставьте номер, и мы Вам перезвоним!</div>
 							</div>
 							<form class="contacts__feedback" action="">
