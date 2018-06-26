@@ -18,9 +18,9 @@
 			<!-- Блок обратного звонка Маленький -->
 			<div class="modal" id="feedback-little">
 				<div class="container">
-					<div class="row justify-content-center">
+					<div class="row wrapper align-items-center justify-content-center">
 						<div class="col-5">
-							<div class="modal__inner">
+							<div class="modal__inner modal--little">
 								<span class="modal__close" data-modal-close="feedback-little"><img src="assets/img/icons/close.png" alt=""></span>
 								<div class="modal__title">
 									<div class="modal__title-head">Оставьте заявку</div>
@@ -41,63 +41,40 @@
 					</div>
 				</div>
 			</div>
-			<div class="block-feedback block-feedback_little" id="blockFeedbackLittle">
-				<div class="block-feedback__shadow"></div>
-				<div class="block-feedback__container">
-					<div class="block-feedback__content">
-						<div class="block-feedback__row">
-							<div class="block-feedback__button-close"><img src="assets/img/icons/close.png" alt=""></div>
-							<div class="block-feedback__text-block">
-								<div class="block-feedback__text-line block-feedback__text-line_medium">Оставьте заявку</div>
-								<div class="block-feedback__text-line block-feedback__text-line_atom" style="padding-top: 20px;">Здравствуйте!</div>
-								<div class="block-feedback__text-line block-feedback__text-line_atom">Оставьте номер, и мы Вам перезвоним!</div>
-							</div>
-							<form class="contacts__feedback" action="">
-								<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
-								<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
-								<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
-								<label class="contacts__feedback-agreement">
-                  <input type="checkbox" name="agreement" checked>
-                  <span class="checkbox"></span>
-                  <div>Нажимая кнопку "Отправить заявку",<br>я даю согласие данному сайту на <br>обработку моих персональных данных</div>
-                </label>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
 
 			<!-- Блок обратного звонка Большой -->
-			<div class="block-feedback" id="blockFeedbackBig">
-					<div class="block-feedback__shadow"></div>
-					<div class="block-feedback__container">
-						<div class="block-feedback__content">
-							<div class="block-feedback__row">
-								<div class="block-feedback__column block-feedback__column_left">
-									<div class="block-feedback__text-block">
-										<div class="block-feedback__text-line">Получите сайт</div>
-										<div class="block-feedback__text-line block-feedback__text-line_orange block-feedback__text-line_big">в рассрочку</div>
-										<div class="block-feedback__text-line block-feedback__text-line_small">быстро и со скидкой</div>
-										<div class="block-feedback__text-line block-feedback__text-line_extra block-feedback__text-line_orange">20%</div>
+			<div class="modal" id="feedback-big">
+				<div class="container">
+					<div class="row align-items-center justify-content-center">
+						<div class="col-12">
+							<div class="modal__inner modal--big">
+								<span class="modal__close" data-modal-close="feedback-little"><img src="assets/img/icons/close.png" alt=""></span>
+								<div class="row align-items-center">
+									<div class="col-6">
+										<div class="modal__title">
+											<div class="modal__title-head">Получите сайт <br><span class="orange">в рассрочку</span></div>
+											<div class="modal__title-subhead">быстро и со скидкой</div>
+											<div class="modal__title-superhead">20%</div>
+										</div>
 									</div>
-								</div>
-								<div class="block-feedback__column block-feedback__column_right">
-									<div class="block-feedback__button-close"><img src="assets/img/icons/close.png" alt=""></div>
-									<form class="contacts__feedback" action="">
-										<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
-										<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
-										<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
-										<label class="contacts__feedback-agreement">
-	                    <input type="checkbox" name="agreement" checked>
-	                    <span class="checkbox"></span>
-	                    <div>Нажимая кнопку "Отправить заявку",<br>я даю согласие данному сайту на <br>обработку моих персональных данных</div>
-	                  </label>
-									</form>
+									<div class="col-6">
+										<form class="contacts__feedback" action="">
+											<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
+											<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
+											<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
+											<label class="contacts__feedback-agreement">
+			                  <input type="checkbox" name="agreement" checked>
+			                  <span class="checkbox"></span>
+			                  <div>Нажимая кнопку "Отправить заявку",<br>я даю согласие данному сайту на <br>обработку моих персональных данных</div>
+			                </label>
+										</form>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>	
+			</div>
 
 			<!-- Блок, показываемый в момент загрузки страницы -->
 			<div class="block-loading" id="blockLoading">

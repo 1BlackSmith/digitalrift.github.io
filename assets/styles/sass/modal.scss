@@ -3,6 +3,75 @@
 	overflow: hidden;
 }
 
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+	background-color: rgba(0,0,0,.6);
+	color: $white;
+
+	&--little {
+		background-image: url('../../img/feedback-small-bg.jpg');
+	}
+
+	.wrapper {
+		height: 100vh;
+	}
+
+	&__inner {
+		padding: 100px 60px;
+
+		.contacts__feedback {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&-input {
+				background-color: transparent;
+				border-color: #777;
+
+				&:focus {
+					border-color: $orange;
+				}
+
+				&::placeholder {
+					color: #fff;
+				}
+			}
+
+			&-btn {
+				z-index: 1;
+			}
+		}
+	}
+
+	&__close {
+		position: absolute;
+		right: 45px;
+		top: 30px;
+		color: white;
+		font-size: 2rem;
+		cursor: pointer;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+
+		&-head {
+			font-family: 'Gotham Pro Bold';
+			font-size: 2.5rem;
+		}
+	}
+
+	&__text {
+		line-height: 1.7em;
+		text-align: center;
+	}
+}
+
 .block-feedback {
 	position: fixed;
 	z-index: 999;

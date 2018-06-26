@@ -368,23 +368,6 @@
 		@include bubble-gradient(to right);
 		box-shadow: 0 15px 30px 0 rgba(0,0,0, 0.2);
 		animation-name: move-bubble-1;
-
-		&:before,
-		&:after {
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			border: 1px solid $blue;
-			border-radius: 50%;
-			animation: pulse 1.8s linear infinite;
-			content: "";
-		}
-
-		&:after {
-			animation-delay: 1s;
-		}
 	}
 
 	&_2 {
