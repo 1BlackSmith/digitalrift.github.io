@@ -12,9 +12,59 @@
 	z-index: 99;
 	background-color: rgba(0,0,0,.6);
 	color: $white;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .2s .2s ease-in; 
+	
+	// Анимация открытия и закрытия
+	&--open {
+		opacity: 1;
+		visibility: visible;
+		transition-delay: 0s;
+	}
+
+	&--open &__inner {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+		transition-delay: .2s;
+	}
+
 
 	&--little {
-		background-image: url('../../img/feedback-small-bg.jpg');
+		background-image: url(../../img/feedback-small-bg.png);
+	}
+
+	&--big {
+		background-image: url(../../img/feedback-bg.png);
+	}
+
+	&--big &__title {
+		margin-bottom: 0;
+		text-align: center;
+
+		&-head {
+			font-size: 3.25rem;
+			line-height: 1.2em;
+
+			.orange {
+				color: #f3a652;
+				font-size: 3.8rem;
+			}
+		}
+
+		&-subhead {
+			font-family: 'Gotham Pro Bold';
+			font-size: 2.1875rem;
+			line-height: 2em;
+		}
+
+		&-superhead {
+			color: #f3a652;
+			font-family: 'Gotham Pro Bold';
+			font-size: 10rem;
+			line-height: 1em;
+			text-shadow: -5px 20px 30px rgba(0,0,0,.2);
+		}
 	}
 
 	.wrapper {
@@ -22,7 +72,11 @@
 	}
 
 	&__inner {
+		@include background;
 		padding: 100px 60px;
+		opacity: 0;
+		transform: scale(0) translateY(50px);
+		transition: all .3s ease-in;
 
 		.contacts__feedback {
 			display: flex;
@@ -31,7 +85,7 @@
 
 			&-input {
 				background-color: transparent;
-				border-color: #777;
+				border-color: rgba(243,166,82,.3);
 
 				&:focus {
 					border-color: $orange;
@@ -69,188 +123,5 @@
 	&__text {
 		line-height: 1.7em;
 		text-align: center;
-	}
-}
-
-.block-feedback {
-	position: fixed;
-	z-index: 999;
-	top: 0;
-	left: 0;
-	display: none;
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-
-	&_little {
-		.block-feedback__content {
-			width: 500px;
-			background-image: url('../../img/feedback-small-bg.jpg');
-		}
-
-		.block-feedback__row {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding: 120px 60px;
-		}
-
-		.block-feedback__text-block {
-			padding-top: 0;
-			padding-left: 0;
-		}
-
-		.block-feedback__text-line:first-child {
-			padding-top: 0;
-		}
-	}
-
-	&_show {
-		animation-name: show;
-		animation-timing-function: linear;
-		animation-duration: 0.4s;
-		animation-fill-mode: forwards;
-	}
-
-	&_hide {
-		animation-name: hide;
-		animation-timing-function: linear;
-		animation-duration: 0.4s;
-		animation-fill-mode: forwards;
-	}
-
-	&__text-block {
-		padding-left: 100px;
-		font-family: 'Gotham Pro Bold';
-	}
-
-	&__text-line {
-		padding-top: 30px;
-		color: white;
-		font-size: 3.2rem;
-		line-height: 2rem;
-
-		&_orange {
-			color: #f3a652;
-		}
-
-		&_atom {
-			padding-top: 0px;
-			font-family: 'Gotham Pro Regular';
-			font-size: 1rem;
-			line-height: 2rem;
-			text-align: center;
-			color: #ccc;
-		}
-
-		&_big {
-			font-size: 3.7rem;
-		}
-
-		&_medium {
-			font-size: 2.7rem;
-		}
-
-		&_small {
-			font-size: 2.15rem;
-		}
-
-		&_extra {
-			font-size: 10rem;
-			line-height: 9rem;
-			text-shadow: -10px 20px 30px rgba(0,0,0,.15);
-		}
-	}
-
-	&__shadow {
-		position: absolute;
-		z-index: 101;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		background-color: black;
-		opacity: 0.6;
-	}
-
-	&__container {
-		position: relative;
-		z-index: 102;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-	}
-
-	&__content {
-		position: relative;
-		width: 1100px;
-		//height: 700px;
-		background-image: url('../../img/feedback-bg.jpg');
-		background-position: center;
-		background-size: cover;
-		box-shadow: 0 4px 40px 0 rgba(0,0,0,0.4);
-	}
-
-	&__button-close {
-		position: absolute;
-		right: 30px;
-		top: 30px;
-		color: white;
-		font-size: 2rem;
-		cursor: pointer;
-
-		&:hover {
-			color: $orange;
-		}
-	}
-
-	&__row {
-		position: relative;
-		z-index: 104;
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		height: 100%;
-	}
-
-	&__column {
-		position: relative;
-		display: flex;
-		width: 50%;
-
-		&_left {
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-
-		&_right {
-			justify-content: center;
-			align-items: center;
-		}
-	}
-
-	.contacts__feedback {
-		display: flex;
-		flex-direction: column;
-
-		&-input {
-			background-color: transparent;
-			border-color: #777;
-
-			&:focus {
-				border-color: $orange;
-			}
-
-			&::placeholder {
-				color: #fff;
-			}
-		}
-
-		&-agreement {
-			color: white;
-		}
 	}
 }

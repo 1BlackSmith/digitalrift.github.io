@@ -1,9 +1,9 @@
 @mixin bubble-gradient($destination) {
-    background:
-        $bubble-color-start
-        linear-gradient(
-            $destination,
-            $bubble-color-start 0%,
-            $bubble-color-center 50%,
-            $bubble-color-end 100%);
+    background: $bubble-color-start linear-gradient($destination, $bubble-color-start 0%, $bubble-color-center 50%, $bubble-color-end 100%);
+}
+
+@mixin background() {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }

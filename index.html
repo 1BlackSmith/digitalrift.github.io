@@ -25,7 +25,7 @@
 								<div class="modal__title">
 									<div class="modal__title-head">Оставьте заявку</div>
 								</div>
-								<div class="modal__text">Здравствуйте! <br> Оставьте номер, и мы Вам перезвоним!</div>
+								<div class="modal__text">Здравствуйте!<br> Оставьте номер, и мы Вам перезвоним!</div>
 								<form class="contacts__feedback" action="">
 									<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
 									<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
@@ -45,14 +45,14 @@
 			<!-- Блок обратного звонка Большой -->
 			<div class="modal" id="feedback-big">
 				<div class="container">
-					<div class="row align-items-center justify-content-center">
+					<div class="row wrapper align-items-center justify-content-center">
 						<div class="col-12">
 							<div class="modal__inner modal--big">
-								<span class="modal__close" data-modal-close="feedback-little"><img src="assets/img/icons/close.png" alt=""></span>
+								<span class="modal__close" data-modal-close="feedback-big"><img src="assets/img/icons/close.png" alt=""></span>
 								<div class="row align-items-center">
 									<div class="col-6">
 										<div class="modal__title">
-											<div class="modal__title-head">Получите сайт <br><span class="orange">в рассрочку</span></div>
+											<div class="modal__title-head">Получите сайт<br><span class="orange">в рассрочку</span></div>
 											<div class="modal__title-subhead">быстро и со скидкой</div>
 											<div class="modal__title-superhead">20%</div>
 										</div>
@@ -118,7 +118,7 @@
 							</nav>
 							<div class="header__contacts col-3">
 								<div class="header__contacts-phone">+7 (920) 820-91-41</div>
-								<a class="header__contacts-feedback js__blockFeedbackShowLittle">Обратный звонок</a>
+								<a class="header__contacts-feedback" data-modal-open="feedback-little">Обратный звонок</a>
 							</div>
 						</div>
 					</header>
@@ -129,7 +129,7 @@
 								<div class="section__title-subhead main__title-subhead">На бизнес в сети</div>
 							</div>
 							<p class="main__text">Правильно преподнесенная идея – залог успеха. Обратим внимание клиентов на ваш бизнес и сэкономим ваши деньги. Индивидуальные решения и поэтапная оплата услуг – лучшие условия для старта.</p>
-							<button class="btn js__blockFeedbackShowBig">Заказать сайт в рассрочку!</button>
+							<button class="btn" data-modal-open="feedback-big">Заказать сайт в рассрочку!</button>
 						</div>
 						<div class="main__right col-5">
 							<img class="main__img-phone" src="assets/img/main-display-phone.png" alt="">
@@ -234,7 +234,7 @@
 							</div>
 						</div>
 						<div class="row justify-content-center">
-							<button class="btn js__blockFeedbackShowLittle">Получить консультанцию</button>
+							<button class="btn" data-modal-open="feedback-little">Получить консультанцию</button>
 						</div>
 					</div>
 				</div>
