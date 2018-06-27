@@ -29,13 +29,15 @@ window.addEventListener('load', function( e ) {
     forEach(modals, function () {
         var modal = this;
         var modalId = this.getAttribute('id');
-        var toggleOpen = document.querySelector('[data-modal-open="' + modalId + '"]');
+        var togglesOpen = document.querySelectorAll('[data-modal-open="' + modalId + '"]');
         var toggleClose = document.querySelector('[data-modal-close="' + modalId + '"]');
 
-        toggleOpen.addEventListener('click', function ( e ) {
-            e.preventDefault();
-            document.body.classList.add('fixed');
-            modal.classList.add('modal--open');
+        forEach(togglesOpen, function () {
+            this.addEventListener('click', function ( e ) {
+                e.preventDefault();
+                document.body.classList.add('fixed');
+                modal.classList.add('modal--open');
+            });
         });
 
         toggleClose.addEventListener('click', function ( e ) {
