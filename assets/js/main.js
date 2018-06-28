@@ -64,10 +64,12 @@ window.addEventListener('load', function( e ) {
 
 
 
-    /* Плавный скролл страницы */
+    /* Плавный переход по якорям страницы */
 
-    SmoothScroll({
-        animationTime: 600 
+    var scroll = new SmoothScroll('a[href*="#"]', { 
+        speed: 600,
+        easing: 'linear',
+        updateURL: false 
     });
 
 });
