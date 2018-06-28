@@ -1,135 +1,111 @@
 // /* Анимация пузырьков */
 
 @keyframes move-bubble-1 {
-    0% {
+    from {
         transform: translate(0, 0);
     }
-    100% {
+    to {
         transform: translate(-10px, 10px);
     }
 }
 
 
 @keyframes move-bubble-2 {
-    0% {
+    from {
         transform: translate(0, 0);
     }
-    100% {
+    to {
         transform: translate(-15px, -15px);
     }
 }
 
 
 @keyframes move-bubble-3 {
-    0% {
+    from {
         transform: translate(0, 0);
     }
-    100% {
+    to {
         transform: translate(-10px, -30px);
     }
 }
 
 @keyframes move-bubble-4 {
-    0% {
+    from {
         transform: translate(0, 0);
     }
-    100% {
+    to {
         transform: translate(-10px, 0);
     }
 }
 
 @keyframes move-bubble-5 {
-    0% {
+    from {
         transform: translate(0, 0);
     }
-    100% {
-        transform: translate(0, 200%);
+    to {
+        transform: translate(0, 20from);
     }
 }
 
 @keyframes move-bubble-6 {
-    0% {
+    from {
         transform: translate(0, 0);
     }
-    100% {
+    to {
         transform: translate(0, -20px);
     }
 }
 
 @keyframes move-bubble-7 {
-    0% {
+    from {
         transform: translate(0, 0);
     }
-    100% {
+    to {
         transform: translate(5px, -10px);
     }
 }
 
 @keyframes move-bubble-8 {
-    0% {
+    from {
         transform: translate(0, 0);
     }
-    100% {
+    to {
         transform: translate(10px, 15px);
     }
 }
 
 @keyframes move-bubble-9 {
-    0% {
+    from {
         transform: translate(0, 0);
     }
-    100% {
+    to {
         transform: translate(-20px, 0);
     }
 }
 
 @keyframes move-bubble-10 {
-    0% {
+    from {
         transform: translate(0, 0);
     }
-    100% {
+    to {
         transform: translate(-10px, 10px);
     }
 }
 
 @keyframes move-bubble-11 {
-    0% {
+    from {
         transform: translate(0, 0);
     }
-    100% {
+    to {
         transform: translate(20px, -20px);
     }
 }
 
 @keyframes move-bubble-12 {
-    0% {
+    from {
         transform: translate(0, 0);
     }
-    100% {
+    to {
         transform: translate(30px, 30px);
-    }
-}
-
-
-/* Скрытие элемета */
-
-@keyframes hide {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-
-/* Показ элемета */
-
-@keyframes show {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 }

@@ -25,21 +25,49 @@
 			width: 100%;
 			text-align: center;
 
+			&-item {
+				display: inline-block;
+			}
+
 			&-link {
+				position: relative;
+				float: left;
 				margin: 0 25px;
 				color: $white;
 				font-size: 1.1111rem;
 
-				&--disabled {
-					position: relative;
+				/* Всплывающая подсказка */
+				.tooltip {
+					position: absolute;
+					top: -35px;
+					left: calc(50% - 7px);
+					border-radius: 4px;
+					padding: 0 20px;
+					background: $orange linear-gradient(to left, $orange, $yellow);
+					color: $white;
+					font-family: 'Gotham Pro Light';
+					font-size: 0.75rem;
+					line-height: 1.5rem;
+					white-space: nowrap;
+					opacity: 0;
+					visibility: hidden;
+					transform: translateY(-10px);
+					transition: all .5s ease;
 
-					&:hover .tooltip {
-						animation-timing-function: ease-in;
-						animation-fill-mode: forwards;
-						animation-duration: 0.3s;
-						animation-name: show;
-						visibility: visible;
+					&:before {
+						position: absolute;
+						top: 100%;
+						left: 7px;
+						border: 3px solid transparent;
+						border-top: 5px solid $yellow;
+						content: "";
 					}
+				}
+
+				&:hover .tooltip {
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(0);
 				}
 			}
 		}
