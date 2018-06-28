@@ -379,6 +379,7 @@
 		height: 20px;
 		width: 20px;
 		@include bubble-gradient(to bottom);
+		filter: blur(1px);
 		box-shadow: 0 0 20px 0 rgba(0,0,0, 0.1);
 		animation-name: move-bubble-2;
 	}
@@ -468,6 +469,7 @@
 		height: 20px;
 		width: 20px;
 		@include bubble-gradient(to left);
+		filter: blur(2px);
 		box-shadow: 0 0 10px 0 rgba(0,0,0, 0.2);
 		animation-name: move-bubble-10;
 		animation-duration: 1s;
