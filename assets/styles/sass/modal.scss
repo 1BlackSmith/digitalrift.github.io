@@ -31,10 +31,12 @@
 
 
 	&--little {
+		padding: 100px 60px;
 		background-image: url(../../img/feedback-small-bg.png);
 	}
 
 	&--big {
+		padding: 150px 60px;
 		background-image: url(../../img/feedback-bg.png);
 	}
 
@@ -73,7 +75,7 @@
 
 	&__inner {
 		@include background;
-		padding: 100px 60px;
+		box-shadow: 0 10px 30px rgba(0,0,0,.4);
 		opacity: 0;
 		transform: scale(0) translateY(50px);
 		transition: all .3s ease-in;
