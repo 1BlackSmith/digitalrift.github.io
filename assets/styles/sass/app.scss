@@ -325,13 +325,16 @@
 		}
 
 		&-agreement {
-			display: flex;
-			align-items: flex-start;
+			position: relative;
+			display: block;
+			padding-left: 30px;
 			font-size: .7777rem;
 			line-height: 1.5em;
 
 			.checkbox {
-				margin-right: 15px;
+				position: absolute;
+				top: 0;
+				left: 0;
 			}
 		}
 	}

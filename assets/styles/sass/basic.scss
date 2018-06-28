@@ -136,32 +136,17 @@
 
 	& + .checkbox {
 		position: relative;
-		border: 2px solid #ccc;
-		border-radius: 100%;
-		width: 16px;
-		height: 16px;
+		width: 30px;
+		height: 20px;
+		background-image: url(../../img/icons/zamochek.png);
+		background-repeat: no-repeat;
+		background-position: left;
+		background-size: contain;
 		cursor: pointer;
-
-		&:before {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			border-radius: 100%;
-			width: 50%;
-			height: 50%;
-			background-color: $orange;
-			visibility: hidden;
-			content: "";
-		}
 	}
 
 	&:checked + .checkbox {
-		//border-color: #777;
-
-		&:before {
-			visibility: visible;
-		}
+		background-image: url(../../img/icons/zamochek-1.png);
 	}
 }
 
