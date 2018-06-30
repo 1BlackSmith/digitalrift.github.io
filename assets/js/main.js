@@ -1,6 +1,6 @@
 /* Подрузка фоновых изображений в соответствии с разрешением экрана */
 
-
+console.log();
 
 
 window.addEventListener('load', function( e ) {
