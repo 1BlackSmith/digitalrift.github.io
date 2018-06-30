@@ -142,11 +142,11 @@
 		background-repeat: no-repeat;
 		background-position: left;
 		background-size: contain;
-		cursor: pointer;
+		// cursor: pointer;
 	}
 
 	&:checked + .checkbox {
-		background-image: url(../../img/icons/zamochek-1.png);
+		// background-image: url(../../img/icons/zamochek-1.png);
 	}
 }
 
