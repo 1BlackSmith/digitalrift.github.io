@@ -15,6 +15,22 @@
 		<!-- Обертка страницы -->
 		<div class="page-wrapper">
 
+			<div class="modal" id="thanks">
+				<div class="container">
+					<div class="row wrapper align-items-center justify-content-center">
+						<div class="col-5">
+							<div class="modal__inner modal--little">
+								<span class="modal__close" data-modal-close="thanks"><img src="assets/img/icons/close.png" alt=""></span>
+								<div class="modal__title">
+									<div class="modal__title-head">Спасибо!</div>
+								</div>
+								<div class="modal__text">Наш менеджер свяжется с вами в течение 15 минут</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<!-- Блок обратного звонка Маленький -->
 			<div class="modal" id="feedback-little">
 				<div class="container">
@@ -27,8 +43,8 @@
 								</div>
 								<div class="modal__text">Здравствуйте!<br> Оставьте номер, и мы Вам перезвоним!</div>
 								<form class="contacts__feedback" action="">
-									<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
-									<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
+									<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:" required="">
+									<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:" required="">
 									<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
 									<label class="contacts__feedback-agreement">
 	                  <input type="checkbox" name="agreement" checked>
@@ -57,9 +73,9 @@
 										</div>
 									</div>
 									<div class="col-6">
-										<form class="contacts__feedback" action="">
-											<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
-											<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:">
+										<form class="contacts__feedback">
+											<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:" required="">
+											<input class="contacts__feedback-input" type="text" name="phone" placeholder="Ваш телефон:" required="">
 											<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
 											<label class="contacts__feedback-agreement">
 			                  <input type="checkbox" name="agreement" checked>
@@ -123,7 +139,7 @@
 								<div class="section__title-subhead main__title-subhead">На бизнес в сети</div>
 							</div>
 							<p class="main__text">Правильно преподнесенная идея – залог успеха. Обратим внимание клиентов на ваш бизнес и сэкономим ваши деньги. Индивидуальные решения и поэтапная оплата услуг – лучшие условия для старта.</p>
-							<button class="btn" data-modal-open="feedback-big">Заказать сайт в рассрочку!</button>
+							<button class="btn" data-modal-open="feedback-big">Заказать сайт в рассрочку</button>
 						</div>
 						<div class="main__right col-5">
 							<img class="main__img-phone" src="assets/img/main-display-phone.png" alt="">
@@ -370,9 +386,9 @@
 						<div class="col-4">
 							<div class="contacts__item contacts__item--feedback">
 								<div class="contacts__item-head">Получите персональную <br>консультацию</div>
-								<form class="contacts__feedback" action="">
-									<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:">
-									<input class="contacts__feedback-input" type="phone" name="phone" placeholder="Ваш телефон:">
+								<form class="contacts__feedback">
+									<input class="contacts__feedback-input" type="text" name="name" placeholder="Ваше имя:" required="">
+									<input class="contacts__feedback-input" type="tel" name="tel" placeholder="Ваш телефон:" required="">
 									<button class="contacts__feedback-btn btn" type="submit">Отправить заявку</button>
 									<label class="contacts__feedback-agreement">
                     <input type="checkbox" name="agreement" checked>
