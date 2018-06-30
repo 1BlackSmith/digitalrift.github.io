@@ -4,7 +4,7 @@ if (isset($_GET['send'])) {
 	$name = $_POST['name'];
 	$tel = $_POST['tel'];
 
-	$to = 'digitalrift@yandex.ru';
+	$to = 'digital-rift@yandex.ru';
 	$subject = '=?utf-8?B?'. base64_encode('Заявка с сайта DigitalRift') .'?=';
 	
 	$message = '
