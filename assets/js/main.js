@@ -1,33 +1,62 @@
+/**
+ * Перебор элементов DOM
+ * @param elems - переменная, в которую записаны элементы
+ * @param func - функция обработки для каждого элемента
+ */
+function forEach( elems, func ) {
+    return [].forEach.call(elems, function ( elem, i, elems ) {
+        return func.apply(elem, arguments);
+    });
+}
+
+/**
+ * Фильтрация элементов DOM
+ * @param elems - переменная, в которую записаны элементы
+ * @param func - функция обработки для каждого элемента
+ */
+function filter( elems, func ) {
+    return [].filter.call(elems, function ( elem, i, elems ) {
+        return func.apply(elem, arguments);
+    });
+}
+
+
+
 /* Подрузка фоновых изображений в соответствии с разрешением экрана */
 
-console.log();
+// Разрешения экранов
+var brakepoints = {
+    uhd: 3840,
+    qhd: 2560,
+    fhd: 1920 
+},
+// Все фоновые изображения разделов в документе
+images = document.querySelectorAll('.section__bg'),
+// Ширина экрана
+screenWidth = screen.width,
+// Префикс с разрешением для изображения
+particle = null;
+
+// Определяем, какого размера изображение нужно подставить
+for (var key in brakepoints) {
+    if (screenWidth <= brakepoints[key]) {
+        particle = brakepoints[key];
+    }
+}
+
+// Подставляем префиксы
+forEach(images, function ( image ) {
+    var src = image.src.split('/'),
+        name = src.pop(),
+        newName = name.split('.').join('--' + particle + '.');
+
+    src.push(newName);
+    //image.src = src.join('/');
+});
+
 
 
 window.addEventListener('load', function( e ) {
-
-    /**
-     * Перебор элементов DOM
-     * @param elems - переменная, в которую записаны элементы
-     * @param func - функция обработки для каждого элемента
-     */
-    function forEach( elems, func ) {
-        return [].forEach.call(elems, function ( elem, i, elems ) {
-            return func.apply(elem, arguments);
-        });
-    }
-
-    /**
-     * Фильтрация элементов DOM
-     * @param elems - переменная, в которую записаны элементы
-     * @param func - функция обработки для каждого элемента
-     */
-    function filter( elems, func ) {
-        return [].filter.call(elems, function ( elem, i, elems ) {
-            return func.apply(elem, arguments);
-        });
-    }
-
-
 
     /* Плавное исчезновение блока загрузки */
 

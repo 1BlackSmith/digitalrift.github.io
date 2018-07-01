@@ -6,7 +6,7 @@
 
 		<!-- Скрываем рекламу хостинга -->
 		<style>
-			body > div:last-child {
+			script + div {
 				visibility: hidden;
 			}
 		</style>
@@ -111,7 +111,7 @@
 					<div class="bubble bubble_1"></div>
 					<div class="bubble bubble_2"></div>
 				</div>
-				<img class="section__bg" src="assets/img/main-display-bg.png" alt="" data-adaptive-img="assets/img/main-display-bg.png">
+				<img class="section__bg" src="assets/img/main-display-bg.png" alt="">
 				<div class="container">
 					<!-- Хедер -->
 					<header class="header">
@@ -424,8 +424,6 @@
 		</div>
 
 		<!-- Скрипты -->
-
-		<!-- Плавный скролл страницы (Перемещен выше из-за конфликта между плагинами) -->
 		<script src="assets/js/libs/SmoothScroll.js"></script>
 		<script>
 			SmoothScroll({
