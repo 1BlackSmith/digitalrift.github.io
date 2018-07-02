@@ -513,12 +513,11 @@
 	height: 100%;
 	width: 100%;
 	background-color: white;
+	transition: all .5s ease;
 
-	&_hide {
-		animation-name: hide;
-		animation-duration: 0.5s;
-		animation-timing-function: linear;
-		animation-fill-mode: forwards;
+	&--hide {
+		opacity: 0;
+		visibility: hidden;
 	}
 
 	&__picture {
