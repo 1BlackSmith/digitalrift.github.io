@@ -51,7 +51,7 @@ forEach(images, function ( image ) {
         newName = name.split('.').join('--' + particle + '.');
 
     src.push(newName);
-    //image.src = src.join('/');
+    image.src = src.join('/');
 });
 
 
