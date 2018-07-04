@@ -1,29 +1,25 @@
 <?php 
 
 if (isset($_GET['send'])) {
-	$name = $_POST['name'];
-	$tel = $_POST['tel'];
+	$name = mb_convert_encoding($_POST['name'], 'windows-1251');
+	$tel = mb_convert_encoding($_POST['tel'], 'windows-1251');
 
 	$to = 'info@digitalrift.agency';
-	$subject = '=?utf-8?B?'. base64_encode('Заявка с сайта DigitalRift') .'?=';
+	$subject = 'DigitalRift';
 	
 	$message = '
     <html>
-      <head>
-        <title>'.$subject.'</title>
-      </head>
       <body>
-				<p>Имя: '. $name .'</p>
-				<p>Телефон: '. $tel .'</p>
+				<p>���: '. $name .'</p>
+				<p>�������: '. $tel .'</p>
       </body>
     </html>';
 
-	$header = "From: ". base64_encode($name) ."\r\n";
+	$header = "From: DigitalRift\r\n";
 	$header .= "MIME-Version: 1.0\r\n";
-	$header .= "Content-type: text/html; charset=utf-8\r\n";
+	$header .= "Content-type: text/html; charset=\"windows-1251\"";
 	
 
-	/* Отправка письма */ 
 	$result = mail($to, $subject, $message, $header);
 
 	echo $result;
